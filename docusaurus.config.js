@@ -9,7 +9,7 @@ const config = {
   title: 'Concrete Form',
   tagline: 'The most popular React form libraries implemented for you',
   url: 'https://concrete-form.github.io',
-  baseUrl: 'concrete-form-docs',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
