@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkconcrete_form_doc=self.webpackChunkconcrete_form_doc||[]).push([[85],{437:function(e){e.exports=JSON.parse('{"permalink":"/concrete-form-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

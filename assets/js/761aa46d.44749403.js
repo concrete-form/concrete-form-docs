@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkconcrete_form_doc=self.webpackChunkconcrete_form_doc||[]).push([[369],{7271:function(o){o.exports=JSON.parse('{"allTagsPath":"/concrete-form-docs/blog/tags","slug":"/concrete-form-docs/blog/tags/hello","name":"hello","count":2,"permalink":"/concrete-form-docs/blog/tags/hello"}')}}]);
