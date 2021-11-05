@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="83 0 83 83">
+    <defs><linearGradient id="blue-gradient"><stop stop-color="#2d388a" offset="0"></stop><stop stop-color="#00aeef" offset="1"></stop></linearGradient></defs>
+    <g id="symbol" transform="matrix(27.7666015625,0,0,27.7666015625,55.64989784459041,-28.016498614341863)" fill="url(#blue-gradient)">
+      <g xmlns="http://www.w3.org/2000/svg">
+        <g><polygon fill="url(#blue-gradient)" points="2.179,1.009 0.989,2.171 1.872,3.302 2.465,3.292 3.062,2.759 2.767,2.428 2.292,2.852 2.085,2.856 1.583,2.211 2.358,1.453 3.225,1.453 4.014,2.49 4.014,1.759 3.443,1.009"></polygon></g>
+        <g><polygon fill="url(#blue-gradient)" points="2.544,1.708 1.947,2.242 2.242,2.571 2.717,2.148 2.923,2.145 3.426,2.79 2.649,3.547 1.784,3.547 0.985,2.499 0.985,3.23 1.565,3.991 2.83,3.991 4.014,2.833 4.014,2.824 3.137,1.697"></polygon></g>
+      </g>
+    </g>
+</svg>
