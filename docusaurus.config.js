@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Concrete Form',
   tagline: 'The most popular React form libraries implemented for you',
-  url: 'https://concrete-form.github.io',
-  baseUrl: '/concrete-form-docs/',
+  url: 'https://concrete-form.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
