@@ -57,10 +57,10 @@ const App = () => (
 
 ## Can I customize my form ?
 
-**Off course!**
+**Sure!**
 
-By choosing Concrete Form controls, you'll be saving time as they're working out of the box. It's still possible to create your own control just like if you were not using Concrete Form.
+By choosing Concrete Form controls, you'll be saving time as they're working out of the box but it's still possible to create your own control. **You have full freedom.**
 
 - You can instanciate the form yourself and use any settings that you want
 - You can provide parameters when registering the field on the form
-- We make no Design decision and you can customize 100% of the UI
+- We make no design decision and you can customize 100% of the UI
