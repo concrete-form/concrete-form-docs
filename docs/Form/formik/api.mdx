@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+title: API
+---
+
+# Formik - API
+
+## `<Form />`
+
+| | Prop | Type | Required | Default | Description |
+| --- | :--- | :--- | :---: | :---: | :--- |
+| ![](/img/icons/formik.png) | **` initialValues `** | Object | ✅ | | Forwarded to [`<Formik />`](https://formik.org/docs/api/formik#initialvalues-values) |
+| ![](/img/icons/formik.png) | **` onSubmit `** | Function | *optionnal* | | Forwarded to [`<Formik />`](https://formik.org/docs/api/formik#onsubmit-values-values-formikbag-formikbag--void--promiseany) |
+| ![](/img/icons/formik.png) | **` formikProps `** | Object | *optionnal* | | Forwarded to [`<Formik {...formikProps} />`](https://formik.org/docs/api/formik) |
+| ![](/img/icons/react.png) | **` formProps `** | Object | *optionnal* | | Forwarded to `<form {...formProps} />` element |
+| ![](/img/icons/react.png) | **` noValidate `** | Boolean | *optionnal* | `true` | Shorthand prop for `<form noValidate />` |
+| ![](/img/icons/cf.png) | **` layout `** | Object | *optionnal* | | Learn how to **[customize layouts](/docs/custom-layouts)** |
+| ![](/img/icons/cf.png) | **` disableWhileSubmitting `** | Boolean | *optionnal* | `true` | Disable all the controls when the form is submitting |
+| ![](/img/icons/cf.png) | **` language `** | String | *optionnal* | `en` | For default translations when no translator is provided |
+| ![](/img/icons/cf.png) | **` translator `** | Function | *optionnal* | | Learn how to  **[handle translations](/docs/translations)** |
+
+### Description
+
+> `<Form />` renders a `<form>` HTML element and create a context for the controls. All controls rendered inside this components will be register automatically with Formik.
+
+### Examples
+```jsx
+import Form from '@concrete-form/formik'
+import Input from '@concrete-form/html5/Input'
+import SubmitButton from '@concrete-form/html5/SubmitButton'
+
+const App = () => {
+  const onSubmit = data => { console.log(data) }
+
+  return (
+    <Form initialValues={{ firstName: '' }} onSubmit={onSubmit} formikProps={{}}>
+      <Input name="firstName" />
+      <SubmitButton>submit</Submit>
+    </Form>
+  )
+}
+```
+
+### Formik context
+
+The `Formik` Context is automatically exposed so it's possible to use [`useFormikContext()`](https://formik.org/docs/api/useFormikContext) normally inside `<Form />`.
+
+## Custom field properties
+
+:::info `Radio`, `Checkbox` and `Select` and handled out of the box.
+It's not possible to specify custom field properties with `fieldProps` prop with Formik since all special cases are already handled by `Concrete Form`.
+:::
+
+## Validation
+https://formik.org/docs/guides/validation
+
+:::warning
+field level validation are not supported for `Concrete Form` controls for now. Use [Schema Validation](https://formik.org/docs/guides/validation#validationschema).
+:::
+
+:::tip Schema Validation
+We strongly beleive that [Schema Validation](https://formik.org/docs/guides/validation#validationschema) is a better option instead of inline rules. Schema validation (such as [Yup](https://github.com/jquense/yup)) will provide better reusability and maintainability **and it's supported very well by Formik**.
+:::
+
+[Learn how to translate Yup's default error locales](/docs/translations)
