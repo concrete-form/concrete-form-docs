@@ -6,14 +6,14 @@ slug: /
 
 # Introduction
 
-## The problem
-- There are already very good form libraries for React. ([`React Hook Form`](https://react-hook-form.com/), [`Formik`](https://formik.org/), ...)
-- There are already very good UI kits for React ([`Material-UI`](https://mui.com/), [`Materialize`](https://github.com/react-materialize/react-materialize), ...)
+## Forms and React
+- There are already good form libraries for React. ([`React Hook Form`](https://react-hook-form.com/), [`Formik`](https://formik.org/), ...)
+- There are already good UI kits for React ([`Material-UI`](https://mui.com/), [`Semantic UI`](https://semantic-ui.com/), ...)
 
 **Using them together always mean a lot of boiler plate before you're ready to start coding your forms.**
 ## Here comes Concrete Form
 
-**Concrete-Form** exports all the common form controls that you need. Renders them using the **UI kit of your choice**, registers them automatically on the **form library of your choice**. 
+**Concrete-Form** render the most common form controls that you need no matter what **UI kit** you are using, registers them automatically on the **form library of your choice**. 
 
 - We **render** the controls
 - We **register** the controls on the form that you selected
@@ -37,8 +37,8 @@ const App = () => (
 ```
 
 #### `<Form>`
-- Render an HTML `<form>`
-- Can accept an existing form created with [`useForm()`](https://react-hook-form.com/api/useform) or will create it for you 🍺
+- Render an HTML `<form>` element
+- Can accept an existing form created with [`useForm()`](https://react-hook-form.com/api/useform) or we'll create it for you 🍺
 - Exposes `React Hook Form` context so you can use [`useFormContext()`](https://react-hook-form.com/api/useformcontext)
 
 #### `<Input>` + `<SubmitButton>`
@@ -48,20 +48,19 @@ const App = () => (
 
 ## Available implementations
 ### Form libraries
-- React Hook Form
-- Formik
+- [React Hook Form](https://github.com/concrete-form/react-hook-form)  [![](https://img.shields.io/appveyor/build/kegi/react-hook-form?style=flat-square)](https://ci.appveyor.com/project/kegi/react-hook-form/history) [![](https://img.shields.io/coveralls/github/concrete-form/react-hook-form?style=flat-square)](https://coveralls.io/github/concrete-form/react-hook-form)
+- [Formik](https://github.com/concrete-form/formik)  [![](https://img.shields.io/appveyor/build/kegi/formik?style=flat-square)](https://ci.appveyor.com/project/kegi/formik/history) [![](https://img.shields.io/coveralls/github/concrete-form/formik?style=flat-square)](https://coveralls.io/github/concrete-form/formik)
 
 ### UI Kits
-- HTML5
-- Material-UI
-- Materialize
+- [HTML5](https://github.com/concrete-form/html5)  [![](https://img.shields.io/appveyor/build/kegi/html5?style=flat-square)](https://ci.appveyor.com/project/kegi/html5/history) [![](https://img.shields.io/coveralls/github/concrete-form/html5?style=flat-square)](https://coveralls.io/github/concrete-form/html5)
+- [Material UI](https://github.com/concrete-form/mui)  [![](https://img.shields.io/appveyor/build/kegi/mui?style=flat-square)](https://ci.appveyor.com/project/kegi/mui/history) [![](https://img.shields.io/coveralls/github/concrete-form/mui?style=flat-square)](https://coveralls.io/github/concrete-form/mui)
 
 ## Can I customize my form ?
 
-**Yup!** You have a complete freedom inside `<Form />`. Your existing controls will work just like before. You can mix Concrete Form's controls with any other controls.
+**Off course!**
 
-Our available controls are only there to save you time. We make no design decision and we forward all received props to the underneath UI component.
+By choosing Concrete Form controls, you'll be saving time as they're working out of the box. It's still possible to create your own control just like if you were not using Concrete Form.
 
 - You can instanciate the form yourself and use any settings that you want
 - You can provide parameters when registering the field on the form
-- You can customize 100% of the UI
+- We make no Design decision and you can customize 100% of the UI
