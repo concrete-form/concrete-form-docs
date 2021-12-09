@@ -1,0 +1,67 @@
+.table, .table th, .table td {
+  border: 0;
+  text-align: left;
+}
+
+.table th {
+  font-size: .9em;
+}
+
+.table thead tr {
+  border-top-width: 0;
+  border-bottom-width: 2px;
+}
+
+.table tr, .table tr:nth-child(2n) {
+  background: transparent;
+}
+
+.table th.descriptionColumnHeader{
+  width: 100%;
+}
+
+.table td code {
+  display: inline-block;
+  font-size: .75em;
+  padding-left: .3em;
+  padding-right: .3em;
+}
+
+.table td.iconColumn{
+  padding-left: .25em;
+  padding-right: .25em;
+  background: #fff;
+}
+.table td.iconColumn img {
+  width: 20px;
+  max-width: none;
+  margin-bottom: -4px;
+}
+
+.table td.nameColumn {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.table td.typeColumn {
+  white-space: nowrap;
+}
+
+.table td.requiredColumn {
+  text-align: center;
+}
+.table td.requiredColumn img {
+  transform: scale(.5);
+}
+
+.table td.descriptionColumn {
+  font-size: .95em;
+}
+
+.table tbody tr.divider {
+  border-top-width: 2px;
+}
+
+.table tbody tr.divider td {
+  padding: 0;
+}

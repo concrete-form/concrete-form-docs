@@ -22,11 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          remarkPlugins: [
-            [npm2yarn, {sync: true}]
-          ],
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/concrete-form/concrete-form-docs',
         },
         theme: {
@@ -42,7 +38,7 @@ const config = {
       navbar: {
         title: 'Concrete Form',
         logo: {
-          alt: 'Concrete Form Logo',
+          alt: 'Concrete Form',
           src: 'img/logo.svg',
         },
         items: [

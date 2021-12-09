@@ -1,0 +1,27 @@
+import Props, { Prop, Divider } from '../components/Props'
+
+<Prop icon="react.png" name="formProps" type="object">
+  Forwarded to <code>{'<form {...formProps} />'}</code> element 
+</Prop>
+
+<Prop icon="react.png" name="noValidate" type="boolean" defaultValue="true">
+  Shorthand prop for <code>{'<form noValidate />'}</code>
+</Prop>
+
+<Divider />
+
+<Prop icon="cf.png" name="layout" type="object">
+  Learn how to <a href="/docs/custom-layouts"><strong>customize layouts</strong></a>
+</Prop>
+
+<Prop icon="cf.png" name="disableWhileSubmitting" type="boolean" defaultValue="true">
+  Disable all the controls when the form is submitting
+</Prop>
+
+<Prop icon="cf.png" name="language" type="string" defaultValue="en">
+  For default translations when no translator is provided
+</Prop>
+
+<Prop icon="cf.png" name="translator" type="function">
+  Learn how to <a href="/docs/translations"><strong>handle translations</strong></a>
+</Prop>
