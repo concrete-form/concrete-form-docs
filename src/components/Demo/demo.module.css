@@ -1,0 +1,15 @@
+.code {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.result {
+  padding: 1.5rem;
+  border-left: solid 1px var(--ifm-toc-border-color);
+  border-right: solid 1px var(--ifm-toc-border-color);
+  border-bottom: solid 1px var(--ifm-toc-border-color);
+  border-bottom-left-radius: var(--ifm-global-radius);
+  border-bottom-right-radius: var(--ifm-global-radius);
+  margin-bottom: 5rem;
+}
