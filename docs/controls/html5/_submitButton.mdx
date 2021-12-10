@@ -1,0 +1,38 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/html5'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6181962da34217003a0d0018.chromatic.com?path=/story/form-controls-submitbutton--default-control)
+
+> a submit button that display a spinner while submitting<br />
+> **Render **[`<button type="submit" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+
+:::info
+When submitting, this button will always be disabled. [`disableWhileSubmitting`](/docs/Form/react-hook-form/api#props) has no effect on that control.
+:::
+
+
+<Props>
+  <Prop icon="cf.png" name="displayLoading" type="boolean" defaultValue="true">
+    If <code>true</code>, a loading indicator is added to the label.<br/>
+    see <code>loadingComponent</code> below to customize what is appended.
+  </Prop>
+
+  <Prop icon="cf.png" name="loadingComponent" type="node" defaultValue="...">
+    Loading indicator to append to the label when the form is submitting
+  </Prop>
+
+  <Prop icon="cf.png" name="alternateLoadingContent" type="node">
+    If provided, this replaces the <strong>whole</strong> label of the button when submitting.
+  </Prop>
+
+  <Prop icon="react.png" name="children" type="node">
+    Label of the button
+  </Prop>
+
+  <Prop icon="react.png" name="{...props}" type="object">
+    Forwarded to <code>{' <button /> '}</code> element
+  </Prop>
+</Props>
+
+#### Example
+<Demo.SubmitButton />
