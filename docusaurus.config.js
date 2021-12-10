@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const codeTheme = require('prism-react-renderer/themes/oceanicNext');
-const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
