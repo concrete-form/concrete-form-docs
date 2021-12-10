@@ -1,0 +1,41 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/html5'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6181962da34217003a0d0018.chromatic.com?path=/story/controls-select--default-control)
+
+> a select that handle single or multiple values<br />
+> **Render: **[`<select />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+
+<Props>
+  <Prop icon="cf.png" name="name" type="string" required>
+    Name of the control
+  </Prop>
+
+  <Prop icon="cf.png" name="options" type="object">
+    Options to render in the select*
+  </Prop>
+
+  <Prop icon="cf.png" name="allowEmpty" type="boolean" defaultValue="false">
+    if set to <code>true</code>, an empty option will be rendered on top.
+  </Prop>
+
+  <Prop icon="react.png" name="children" type="node">
+    An alternative to <code>options</code>
+  </Prop>
+
+  <Prop icon="react.png" name="{...props}" type="object">
+    Forwarded to <code>{' <input /> '}</code> element
+  </Prop>
+</Props>
+
+#### *Options format
+
+:::tip
+See [options doc](/docs/Options) for full options specs.
+:::
+
+- Options props are forwarded to [`<option />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option) elements.
+- Group props are forwarded to [`<optgroup />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup) elements.
+
+#### Example
+<Demo.Select />
