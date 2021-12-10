@@ -1146,6 +1146,23 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
+"@concrete-form/core@^0.0.66":
+  version "0.0.66"
+  resolved "https://registry.yarnpkg.com/@concrete-form/core/-/core-0.0.66.tgz#a445adec3aaed7d5ecd3f3598f9438d5de0e69a2"
+  integrity sha512-HQsh25Qaq+eKoTAGM0Mn5/dofi0jlnMdxhCaD9uYCvXWzlxJ9sphQeUHbgs/VQv9QbxH8D9P1KG/W5E5gM958Q==
+
+"@concrete-form/html5@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@concrete-form/html5/-/html5-0.0.16.tgz#f6774b47ccce229cdc1f81b270b0ab0c1aa3f510"
+  integrity sha512-0I9HCt1mOmpCxeJMBWOqfV26PRz657giDeY54M4Zk/VF3fZm9oduj6hEaX4MsvP5PWOQHkrDVUslzfDEnkkPdw==
+
+"@concrete-form/react-hook-form@^0.0.56":
+  version "0.0.56"
+  resolved "https://registry.yarnpkg.com/@concrete-form/react-hook-form/-/react-hook-form-0.0.56.tgz#26100e2613b4a0c31c1471237d55deb480756cd6"
+  integrity sha512-HNufkO5yYinEWWYcsNco3AtOca+NXd1eSB2WCegdlO44j2DXMXVJ+pyoMNEKe+nhQN9FmnhWKGml/toJEmU8cA==
+  dependencies:
+    "@concrete-form/core" "^0.0.66"
+
 "@docsearch/css@3.0.0-alpha.41":
   version "3.0.0-alpha.41"
   resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.0.0-alpha.41.tgz#c5c8e803541bd157ad86e764c2c1e9f1b5a68592"
@@ -6196,6 +6213,11 @@ react-helmet@^6.1.0:
     prop-types "^15.7.2"
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
+
+react-hook-form@^7.21.0:
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.21.0.tgz#f6f0311295b83ca768873ca9f2a787ff1525f591"
+  integrity sha512-aekCf+dedYFIg+7nCK2acMvZ+s6Ohw2I7UNQ+zNIadBl1SoXow2Tl6c3F49xF8GFCdn5jeK43JHH26rmtdRyLQ==
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
