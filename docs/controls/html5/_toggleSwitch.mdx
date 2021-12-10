@@ -3,9 +3,12 @@ import * as Demo from '../../../src/demo/html5'
 
 [![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6181962da34217003a0d0018.chromatic.com?path=/story/controls-toggleswitch--default-control)
 
-> a **`boolean` control** that can be toggled on or off<br />
+> a **`boolean`** control that can be toggled **on** or **off**<br />
 > **Render: **[`<input type="checkbox" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
 
+:::tip
+Great article about **[Checkbox vs Toggle Switch](https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8)**
+:::
 :::note
 We render a checkbox with some CSS since there is no toggle switch natively in HTML5. Don't forget to import our CSS file or add your own.
 :::
@@ -13,10 +16,6 @@ We render a checkbox with some CSS since there is no toggle switch natively in H
 <Props>
   <Prop icon="cf.png" name="name" type="string" required>
     Name of the control
-  </Prop>
-
-  <Prop icon="cf.png" name="applyInitialValue" type="boolean" defaultValue="false">
-    Apply initial value to the form (<code>false</code> by default)
   </Prop>
 
   <Prop icon="cf.png" name="label" type="string">
