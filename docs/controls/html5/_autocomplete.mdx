@@ -1,0 +1,24 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/html5'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6181962da34217003a0d0018.chromatic.com?path=/story/controls-autocomplete--default-control)
+
+> **Render: **[`<input autocomplete="on" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
+:::note
+There is no rich autocomplete feature in HTML5. Meaning that this control is boring and should be avoided when using HTML5.
+:::
+
+
+<Props>
+  <Prop icon="cf.png" name="name" type="string" required>
+    Name of the control
+  </Prop>
+
+  <Prop icon="react.png" name="{...props}" type="object">
+    Forwarded to <code>{' <input /> '}</code> element.
+  </Prop>
+</Props>
+
+#### Example
+<Demo.Autocomplete />
