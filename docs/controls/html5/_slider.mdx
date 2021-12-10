@@ -1,0 +1,28 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/html5'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6181962da34217003a0d0018.chromatic.com?path=/story/controls-slider--default-control)
+
+> a slider to select a number within a range<br />
+> **Render: **[`<input type="range" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
+
+<Props>
+  <Prop icon="cf.png" name="name" type="string" required>
+    Name of the control
+  </Prop>
+
+  <Prop icon="cf.png" name="label" type="string">
+    Label
+  </Prop>
+
+  <Prop icon="cf.png" name="labelPosition" type={<>top<br />| bottom<br />| left<br />| right</>} defaultValue="top">
+    Position of the label
+  </Prop>
+
+  <Prop icon="react.png" name="{...props}" type="object">
+    Forwarded to <code>{' <input /> '}</code> element
+  </Prop>
+</Props>
+
+#### Example
+<Demo.Slider />
