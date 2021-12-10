@@ -1,10 +1,16 @@
 ---
 sidebar_position: 2
 title: API
+description: Formik API for Concrete Form
 ---
 
+import ConcreteFormStyles from '!!raw-loader!@concrete-form/html5/styles.css'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import CommonFormProps from '../../../src/commonProps/formProps.mdx'
+import * as Demo from '../../../src/demo/formik'
+
+<!-- docusaurus do not support css import from node_modules -->
+<style type="text/css"> { ConcreteFormStyles } </style>
 
 # Formik - API
 
@@ -32,22 +38,7 @@ import CommonFormProps from '../../../src/commonProps/formProps.mdx'
 </Props>
 
 ### Examples
-```jsx
-import Form from '@concrete-form/formik'
-import Input from '@concrete-form/html5/Input'
-import SubmitButton from '@concrete-form/html5/SubmitButton'
-
-const App = () => {
-  const onSubmit = data => { console.log(data) }
-
-  return (
-    <Form initialValues={{ firstName: '' }} onSubmit={onSubmit} formikProps={{}}>
-      <Input name="firstName" />
-      <SubmitButton>submit</Submit>
-    </Form>
-  )
-}
-```
+<Demo.Simple />
 
 ### Formik context
 

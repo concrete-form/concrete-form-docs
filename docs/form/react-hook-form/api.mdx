@@ -1,10 +1,16 @@
 ---
 sidebar_position: 2
 title: API
+description: React Hook Form API for Concrete Form
 ---
 
+import ConcreteFormStyles from '!!raw-loader!@concrete-form/html5/styles.css'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import CommonFormProps from '../../../src/commonProps/formProps.mdx'
+import * as Demo from '../../../src/demo/react-hook-form'
+
+<!-- docusaurus do not support css import from node_modules -->
+<style type="text/css"> { ConcreteFormStyles } </style>
 
 # React Hook Form - API
 
@@ -30,50 +36,15 @@ import CommonFormProps from '../../../src/commonProps/formProps.mdx'
 
 ### Examples
 #### Without a form instance
-```jsx
-import Form from '@concrete-form/react-hook-form'
-import Input from '@concrete-form/html5/Input'
-import SubmitButton from '@concrete-form/html5/SubmitButton'
-
-const App = () => {
-  const onSubmit = data => { console.log(data) }
-
-  return (
-    <Form onSubmit={onSubmit}>
-      <Input name="firstName" />
-      <SubmitButton>submit</Submit>
-    </Form>
-  )
-}
-```
-
 :::info
- When missing, a form instance is created automatically with [`useForm()`](https://react-hook-form.com/api/useform) and the default parameters.
+ When not provided, a form instance is created automatically with [`useForm()`](https://react-hook-form.com/api/useform) and the default parameters.
 :::
 
+<Demo.NoInstance />
+
 #### With an existing form instance
-```jsx
-import { useForm } from 'react-hook-form'
-import Form from '@concrete-form/react-hook-form'
-import Input from '@concrete-form/html5/Input'
-import SubmitButton from '@concrete-form/html5/SubmitButton'
 
-const App = () => {
-  const form = useForm({
-    mode: 'onTouched',
-    criteriaMode: 'all',
-  })
-
-  const onSubmit = data => { console.log(data) }
-
-  return (
-    <Form form={form} onSubmit={onSubmit}>
-      <Input name="firstName" />
-      <SubmitButton>submit</Submit>
-    </Form>
-  )
-}
-```
+<Demo.WithInstance />
 
 ### React Hook Form context
 
@@ -85,22 +56,7 @@ With any `Concrete Form` control, you can provide a prop `fieldProps`. If provid
 
 ### Example
 
-```jsx
-import Form from '@concrete-form/react-hook-form'
-import Input from '@concrete-form/html5/Input'
-
-const App = () => (
-  <Form>
-    <Input
-      name="firstName"
-      fieldProps={{
-        required: true,
-        min: { value: 5, message: 'too short !' }
-      }}
-    />
-  </Form>
-)
-```
+<Demo.Validation />
 
 ## Validation translations
 :::tip
