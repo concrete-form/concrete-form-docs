@@ -41,16 +41,34 @@ import SubmitButtonDemoSource from '!!raw-loader!./SubmitButton'
 import LabelledControlDemo from './LabelledControl'
 import LabelledControlDemoSource from '!!raw-loader!./LabelledControl'
 
-export const Input = () => <Demo Component={InputDemo} source={InputDemoSource} />
-export const Autocomplete = () => <Demo Component={AutocompleteDemo} source={AutocompleteDemoSource} />
-export const DateTime = () => <Demo Component={DateTimeDemo} source={DateTimeDemoSource} />
-export const FileInput = () => <Demo Component={FileInputDemo} source={FileInputDemoSource} />
-export const Select = () => <Demo Component={SelectDemo} source={SelectDemoSource} />
-export const SingleCheckbox = () => <Demo Component={SingleCheckboxDemo} source={SingleCheckboxDemoSource} />
-export const Slider = () => <Demo Component={SliderDemo} source={SliderDemoSource} />
-export const Textarea = () => <Demo Component={TextareaDemo} source={TextareaDemoSource} />
-export const ToggleSwitch = () => <Demo Component={ToggleSwitchDemo} source={ToggleSwitchDemoSource} />
-export const Checkbox = () => <Demo Component={CheckboxDemo} source={CheckboxDemoSource} />
-export const Radio = () => <Demo Component={RadioDemo} source={RadioDemoSource} />
-export const SubmitButton = () => <Demo Component={SubmitButtonDemo} source={SubmitButtonDemoSource} />
-export const LabelledControl = () => <Demo Component={LabelledControlDemo} source={LabelledControlDemoSource} />
+import CustomLayoutDemo from './CustomLayout'
+import CustomLayoutDemoSource from '!!raw-loader!./CustomLayout'
+
+import StringOptionsDemo from './StringOptions'
+import StringOptionsDemoSource from '!!raw-loader!./StringOptions'
+
+import LabelledOptionsDemo from './LabelledOptions'
+import LabelledOptionsDemoSource from '!!raw-loader!./LabelledOptions'
+
+import GroupOptionsDemo from './GroupOptions'
+import GroupOptionsDemoSource from '!!raw-loader!./GroupOptions'
+
+export const Input = props => <Demo Component={InputDemo} source={InputDemoSource} {...props} />
+export const Autocomplete = props => <Demo Component={AutocompleteDemo} source={AutocompleteDemoSource} {...props} />
+export const DateTime = props => <Demo Component={DateTimeDemo} source={DateTimeDemoSource} {...props} />
+export const FileInput = props => <Demo Component={FileInputDemo} source={FileInputDemoSource} {...props} />
+export const Select = props => <Demo Component={SelectDemo} source={SelectDemoSource} {...props} />
+export const SingleCheckbox = props => <Demo Component={SingleCheckboxDemo} source={SingleCheckboxDemoSource} {...props} />
+export const Slider = props => <Demo Component={SliderDemo} source={SliderDemoSource} {...props} />
+export const Textarea = props => <Demo Component={TextareaDemo} source={TextareaDemoSource} {...props} />
+export const ToggleSwitch = props => <Demo Component={ToggleSwitchDemo} source={ToggleSwitchDemoSource} {...props} />
+export const Checkbox = props => <Demo Component={CheckboxDemo} source={CheckboxDemoSource} {...props} />
+export const Radio = props => <Demo Component={RadioDemo} source={RadioDemoSource} {...props} />
+export const SubmitButton = props => <Demo Component={SubmitButtonDemo} source={SubmitButtonDemoSource} {...props} />
+export const LabelledControl = props => <Demo Component={LabelledControlDemo} source={LabelledControlDemoSource} {...props} />
+
+export const CustomLayout = props => <Demo Component={CustomLayoutDemo} source={CustomLayoutDemoSource} {...props} />
+
+export const StringOptions = props => <Demo Component={StringOptionsDemo} source={StringOptionsDemoSource} {...props} />
+export const LabelledOptions = props => <Demo Component={LabelledOptionsDemo} source={LabelledOptionsDemoSource} {...props} />
+export const GroupOptions = props => <Demo Component={GroupOptionsDemo} source={GroupOptionsDemoSource} {...props} />
