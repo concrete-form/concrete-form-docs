@@ -4,6 +4,8 @@ title: Introduction
 slug: /
 ---
 
+import { Basic as BasicDemo } from  '../../src/demo/mui'
+
 # Introduction
 
 ## Forms and React
@@ -16,30 +18,19 @@ slug: /
 **Concrete-Form** render the most common form controls that you need no matter what **UI kit** you are using, registers them automatically on the **form library of your choice**. 
 
 - We **render** the controls
-- We **register** the controls on the form that you selected
+- We **register** the controls on the form library
 - We **display the errors**
-- We help you to **translate** validation errors
-- We help you to **test** your forms
+- We help you to **translate** default validation errors
+- We help you to **unit test** your forms
 
 ### Example
 > **`React Hook Form`** with **`Material-UI`**
 
-```jsx
-import Form from '@concrete-form/react-hook-form'
-import { Input, SubmitButton } from '@concrete-form/mui'
-
-const App = () => (
-  <Form onSubmit={...}>
-    <Input name="name" placeholder="Enter your name" />
-    <SubmitButton>Send</SubmitButton>
-  </Form>
-)
-```
+<BasicDemo dense />
 
 #### `<Form>`
 - Render an HTML `<form>` element
 - Can accept an existing form created with [`useForm()`](https://react-hook-form.com/api/useform) or we'll create it for you 🍺
-- Exposes `React Hook Form` context so you can use [`useFormContext()`](https://react-hook-form.com/api/useformcontext)
 
 #### `<Input>` + `<SubmitButton>`
 - Render a `MUI TextField` and a `MUI Button`
@@ -57,9 +48,9 @@ const App = () => (
 
 ## Can I customize my form ?
 
-**Sure!**
+**Hell yes!**
 
-By choosing Concrete Form controls, you'll be saving time as they're working out of the box but it's still possible to create your own control. **You have full freedom.**
+By choosing Concrete Form controls, you'll be saving time as they're working out of the box but it's still possible to create your own control. **You have complete freedom.**
 
 - You can instanciate the form yourself and use any settings that you want
 - You can provide parameters when registering the field on the form
