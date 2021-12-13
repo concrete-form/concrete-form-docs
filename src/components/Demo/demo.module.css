@@ -11,5 +11,14 @@
   border-bottom: solid 1px var(--ifm-toc-border-color);
   border-bottom-left-radius: var(--ifm-global-radius);
   border-bottom-right-radius: var(--ifm-global-radius);
-  margin-bottom: 5rem;
+  margin-bottom: 5rem; 
+}
+
+.dense {
+  margin-bottom: 1.25rem;
+}
+
+.codeHidden {
+  border: solid 1px var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
 }
