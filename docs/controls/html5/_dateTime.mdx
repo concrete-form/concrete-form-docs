@@ -1,3 +1,4 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 
@@ -7,15 +8,13 @@ import * as Demo from '../../../src/demo/html5'
 > **Render: **[`<input type="date" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
 
 <Props>
-  <Prop icon="cf.png" name="name" type="string" required>
-    Name of the control
-  </Prop>
+  <CommonProps />
 
-  <Prop icon="cf.png" name="type" type={<>date<br />| time<br />| datetime</>} defaultValue="date">
+  <Prop icon="cf.png" name="type" type={<>"date"<br />| "time"<br />| "datetime"</>} defaultValue='"date"'>
     Type of input to render
   </Prop>
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <input /> '}</code> element
   </Prop>
 </Props>

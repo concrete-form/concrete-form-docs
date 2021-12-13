@@ -1,3 +1,148 @@
 ---
+sidebar_position: 4
 title: Advanced layout customization
+description: Advanced layout customization for HTML5 controls
 ---
+
+import ConcreteFormStyles from '!!raw-loader!@concrete-form/html5/styles.css'
+import { CustomLayout } from '../../../src/demo/html5'
+import Props, { Prop } from '../../../src/components/LayoutProps'
+import './styles.css'
+
+<!-- docusaurus do not support css import from node_modules -->
+<style type="text/css"> { ConcreteFormStyles } </style>
+
+:::tip
+For most projects, you **DON'T** need that level of customization. You should use CSS instead.
+:::
+
+## Set custom layout components
+
+Concrete Form allows you to customize every single components used for layout.<br />
+These components need to be defined at the `<Form />` level like so:
+
+```jsx
+<Form layout={{
+  control: ...,
+  errors: ...,
+  itemLabel: ...,
+  itemsGroup: ...,
+  label: ...,
+  labelledControl: ...,
+}}>
+  Your form content
+</Form>
+```
+
+## Available layouts
+
+<CustomLayout hideCode dense />
+
+| layout | description |
+| :--- | :--- |
+| <div className="cl cl-control">control</div> | Renders **control** and **errors** components |
+| <div className="cl cl-errors">errors</div> | Renders the field errors (to be injected in **control**) |
+| <div className="cl cl-itemLabel">itemLabel</div> | Renders each items (control + label) in a group (ex: Checkbox or Radio) |
+| <div className="cl cl-itemsGroup">itemsGroup</div> | Renders a group of controls (items) |
+| <div className="cl cl-label">label</div> | Renders a label inside `LabelledControl` |
+| <div className="cl cl-labelledControl">labelledControl</div> | Renders a label and a control |
+
+## Layout props
+The components will received these props
+
+### control
+
+<Props>
+  <Prop name="name" type="string">
+    name of the control
+  </Prop>
+
+  <Prop name="control" type="node">
+    Control component
+  </Prop>
+
+  <Prop name="errors" type="node">
+    Errors component. (result of <div className="cl cl-errors">errors</div> layout)
+  </Prop>
+</Props>
+
+### errors
+
+<Props>
+  <Prop name="name" type="string">
+    name of the control
+  </Prop>
+
+  <Prop name="errors" type="string[]">
+    array of translated errors
+  </Prop>
+</Props>
+
+### itemLabel
+
+<Props>
+  <Prop name="name" type="string">
+    name of the control
+  </Prop>
+
+  <Prop name="control" type="node">
+    control element (checkbox, radio, toggle switch, etc)
+  </Prop>
+
+  <Prop name="label" type="node">
+    label of the control
+  </Prop>
+
+  <Prop name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>}>
+    position of the label
+  </Prop>
+</Props>
+
+### itemGroup
+
+<Props>
+  <Prop name="name" type="string">
+    name of the control
+  </Prop>
+
+  <Prop name="items" type="node">
+    result of multiple <div className="cl cl-itemLabel">itemLabel</div><br />
+    <strong>Note:</strong> this is a single node and <strong>not</strong> an array
+  </Prop>
+
+  <Prop name="label" type="node">
+    label of the control
+  </Prop>
+
+  <Prop name="orientation" type={<>"vertical" | "horizontal"</>}>
+    orientation of the items
+  </Prop>
+</Props>
+
+### label
+
+<Props>
+  <Prop name="label" type="node">
+    label to render
+  </Prop>
+
+  <Prop name="htmlFor" type="string | undefined">
+    "<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/for" target="_blank"><strong>for</strong></a>" value to provide to the label (<em>if available</em>)
+  </Prop>
+</Props>
+
+### labelledControl
+
+<Props>
+  <Prop name="control" type="node">
+    result of <div className="cl cl-control">control</div>
+  </Prop>
+
+  <Prop name="label" type="node">
+    result of <div className="cl cl-label">label</div>
+  </Prop>
+
+  <Prop name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>}>
+    position of the label (relative to the control)
+  </Prop>
+</Props>

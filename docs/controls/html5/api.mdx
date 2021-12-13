@@ -1,14 +1,16 @@
 ---
-title: HTML5 Controls API
+title: API
+hide_title: true
 description: HTML controls API for Concrete Form
-sidebar_label: API
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import ConcreteFormStyles from '!!raw-loader!@concrete-form/html5/styles.css'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 import './styles.css'
+
+import Header from './_header.mdx'
 
 import Input from './_input.mdx'
 import Autocomplete from './_autocomplete.mdx'
@@ -27,21 +29,9 @@ import LabelledControl from './_labelledControl.mdx'
 <!-- docusaurus do not support css import from node_modules -->
 <style type="text/css"> { ConcreteFormStyles } </style>
 
-[![](https://img.shields.io/appveyor/build/kegi/html5?style=flat-square)](https://ci.appveyor.com/project/kegi/html5/history) [![](https://img.shields.io/coveralls/github/concrete-form/html5?style=flat-square)](https://coveralls.io/github/concrete-form/html5)
+# HTML5 Controls API
 
-**Github repo:** https://github.com/concrete-form/html5
-
-## Styles
-
-```jsx
-import '@concrete-form/html5/styles.css'
-```
-> These minimal styles are not mandatory.
-
-- Add red color to errors and invalid controls
-- Handle the position of the label (left, right, top or bottom)
-- Handle orientation of the group of items (horizontally or vertically)
-- Add styles to `ToggleSwitch`
+<Header />
 
 ## Controls
 

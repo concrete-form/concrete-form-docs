@@ -1,3 +1,4 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 
@@ -14,19 +15,17 @@ We render a checkbox with some CSS since there is no toggle switch natively in H
 :::
 
 <Props>
-  <Prop icon="cf.png" name="name" type="string" required>
-    Name of the control
-  </Prop>
+  <CommonProps />
 
-  <Prop icon="cf.png" name="label" type="string">
+  <Prop icon="cf.png" name="label" type="node">
     Label
   </Prop>
 
-  <Prop icon="cf.png" name="labelPosition" type={<>top<br />| bottom<br />| left<br />| right</>} defaultValue="right">
+  <Prop icon="cf.png" name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>} defaultValue='"right"'>
     Position of the label
   </Prop>
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <input /> '}</code> element
   </Prop>
 </Props>

@@ -1,3 +1,4 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 
@@ -7,9 +8,7 @@ import * as Demo from '../../../src/demo/html5'
 > **Render: **[`<select />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
 
 <Props>
-  <Prop icon="cf.png" name="name" type="string" required>
-    Name of the control
-  </Prop>
+  <CommonProps />
 
   <Prop icon="cf.png" name="options" type="object">
     Options to render in the select*
@@ -19,11 +18,11 @@ import * as Demo from '../../../src/demo/html5'
     if set to <code>true</code>, an empty option will be rendered on top.
   </Prop>
 
-  <Prop icon="react.png" name="children" type="node">
-    An alternative to <code>options</code>
+  <Prop icon="html5.png" name="children" type="node">
+    An alternative to <code>options</code>. You can render your own HTML5 elements.
   </Prop>
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <input /> '}</code> element
   </Prop>
 </Props>
@@ -31,7 +30,7 @@ import * as Demo from '../../../src/demo/html5'
 #### *Options format
 
 :::tip
-See [options doc](/docs/Options) for full options specs.
+See [control options](./control-options) for full options specs.
 :::
 
 - Options props are forwarded to [`<option />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option) elements.

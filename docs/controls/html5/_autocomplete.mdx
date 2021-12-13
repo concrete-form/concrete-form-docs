@@ -1,3 +1,4 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 
@@ -6,16 +7,14 @@ import * as Demo from '../../../src/demo/html5'
 > **Render: **[`<input autocomplete="on" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 :::note
-There is no rich autocomplete feature in HTML5. Meaning that this control is boring and should be avoided when using HTML5.
+There is no rich autocomplete feature in HTML5. This control should be avoided when using HTML5.
 :::
 
 
 <Props>
-  <Prop icon="cf.png" name="name" type="string" required>
-    Name of the control
-  </Prop>
+  <CommonProps />  
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <input /> '}</code> element.
   </Prop>
 </Props>

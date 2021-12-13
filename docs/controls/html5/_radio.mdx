@@ -1,3 +1,4 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
 import Props, { Prop, Divider } from '../../../src/components/Props'
 import * as Demo from '../../../src/demo/html5'
 
@@ -7,23 +8,21 @@ import * as Demo from '../../../src/demo/html5'
 > **Render multiple: **[`<input type="radio" />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
 
 <Props>
-  <Prop icon="cf.png" name="name" type="string" required>
-    Name of the control
-  </Prop>
+  <CommonProps />
 
   <Prop icon="cf.png" name="options" type="object">
     Options to render*
   </Prop>
 
-  <Prop icon="cf.png" name="orientation" type={<>vertical<br />| horizontal</>} defaultValue="vertical">
-    Orientation of the radio buttons
+  <Prop icon="cf.png" name="orientation" type={<>"vertical"<br />| "horizontal"</>} defaultValue='"vertical"'>
+    Orientation of the checkboxes
   </Prop>
 
-  <Prop icon="cf.png" name="labelPosition" type={<>top<br />| bottom<br />| left<br />| right</>} defaultValue="right">
+  <Prop icon="cf.png" name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>} defaultValue='"right"'>
     Position of each label
   </Prop>
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <strong>each</strong> <code>{' <input /> '}</code> element
   </Prop>
 </Props>
@@ -31,7 +30,7 @@ import * as Demo from '../../../src/demo/html5'
 #### *Options format
 
 :::tip
-See [options doc](/docs/Options) for full options specs.
+See [control options](./control-options) for full options specs.
 :::
 
 - Options props are forwarded to [`<input />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) elements.

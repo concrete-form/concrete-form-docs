@@ -1,0 +1,87 @@
+---
+sidebar_position: 3
+title: Control options
+description: Control with multiple choices such as Select, Checkbox and Radio in HTML5
+---
+
+import ConcreteFormStyles from '!!raw-loader!@concrete-form/html5/styles.css'
+import * as Demo from '../../../src/demo/html5'
+import './styles.css'
+
+<!-- docusaurus do not support css import from node_modules -->
+<style type="text/css"> { ConcreteFormStyles } </style>
+
+## Multiple choices controls
+
+- [`<Select />`](./api#select-)
+- [`<Checkbox />`](./api#checkbox-)
+- [`<Radio />`](./api#radio-)
+
+## `options` prop
+
+**`options`** is expected to be an `array` containing items defined below :
+
+### String
+the **key** and the **value** will share the same `string` value provided.
+
+<Demo.StringOptions dense />
+
+Will produce :
+```html
+<input name="demo" type="radio" value="foo"> foo
+<input name="demo" type="radio" value="bar"> bar
+<input name="demo" type="radio" value="baz"> baz
+```
+
+### Labelled option
+Labelled options are defined as object. They can set their value, their label and some props to forward to the control.
+
+| Property | type | description |
+| :--- | :--- | :--- |
+| label | `node` | Any React node such as string |
+| value | `string` | The value of the option |
+| props | `object` | Forwarded to the rendered form control |
+
+<Demo.LabelledOptions dense />
+
+Will produce :
+```html
+<input name="demo" type="checkbox" value="actual-value"> Displayed label
+<input name="demo" type="checkbox" value="123"> <strong>I am bold</strong>
+<input name="demo" type="checkbox" value="abc" disabled=""> I am disabled
+```
+
+### Group
+A group has a label, holds others options and cannot be selected.
+
+:::info
+Groups are only supported by [`<Select />`](./api#select-).<br />
+In HTML5, `<optgroup>` cannot be nested.
+:::
+
+| Property | type | description |
+| :--- | :--- | :--- |
+| group | `string` | Forwarded to [`<optgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)'s **label** prop |
+| options | `mixed` | Mix of strings and labelled options |
+| props | `object` | Forwarded to [`<optgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup) |
+
+<Demo.GroupOptions dense />
+
+Will produce* :
+```html
+<select name="demo">
+  <option value="first">first</option>
+
+  <optgroup label="My group">
+    <option value="foo">foo</option>
+    <option value="bar">Bar!</option>
+  </optgroup>
+
+  <option value="not-part-of-any-group">not-part-of-any-group</option>
+
+  <optgroup label="Disabled group" disabled="">
+    <option value="first">first</option>
+    <option value="second">second</option>
+  </optgroup>
+</select>
+```

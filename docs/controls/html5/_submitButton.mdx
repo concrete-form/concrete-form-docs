@@ -10,14 +10,13 @@ import * as Demo from '../../../src/demo/html5'
 When submitting, this button will always be disabled. [`disableWhileSubmitting`](/docs/Form/react-hook-form/api#props) has no effect on that control. Also, if the form contains errors, the button is also disabled.
 :::
 
-
 <Props>
   <Prop icon="cf.png" name="displayLoading" type="boolean" defaultValue="true">
     If <code>true</code>, a loading indicator is added to the label.<br/>
     see <code>loadingComponent</code> below to customize what is appended.
   </Prop>
 
-  <Prop icon="cf.png" name="loadingComponent" type="node" defaultValue="...">
+  <Prop icon="cf.png" name="loadingComponent" type="node" defaultValue='"..."'>
     Loading indicator to append to the label when the form is submitting
   </Prop>
 
@@ -25,11 +24,11 @@ When submitting, this button will always be disabled. [`disableWhileSubmitting`]
     If provided, this replaces the <strong>whole</strong> label of the button when submitting.
   </Prop>
 
-  <Prop icon="react.png" name="children" type="node">
-    Label of the button
+  <Prop icon="html5.png" name="children" type="node">
+    Content of the <code>{' <button /> '}</code>
   </Prop>
 
-  <Prop icon="react.png" name="{...props}" type="object">
+  <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <button /> '}</code> element
   </Prop>
 </Props>
