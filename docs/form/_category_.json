@@ -1,4 +1,5 @@
 {
   "label": "Form",
-  "position": 2
+  "position": 2,
+  "collapsible": false
 }

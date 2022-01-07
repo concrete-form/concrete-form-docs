@@ -26,3 +26,32 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.sidebar-driver > div > a {
+  position: relative;
+  justify-content: flex-start;
+  font-weight: bold;
+  color: #333;
+  padding-left: 40px;
+}
+
+.sidebar-driver > div > a::before {
+  transform: scale(0.8);
+  padding-right: .5rem;
+  position: absolute;
+  left: 10px;
+  top: 4px;
+}
+
+
+.sidebar-html5 > div > a::before {
+  content: url('../../static/img/icons/html5.png');
+}
+
+.sidebar-formik > div > a::before {
+  content: url('../../static/img/icons/formik.png');
+}
+
+.sidebar-react-hook-form > div > a::before {
+  content: url('../../static/img/icons/rhf.png');
+}
