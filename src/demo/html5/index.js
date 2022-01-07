@@ -29,11 +29,11 @@ import TextareaDemoSource from '!!raw-loader!./Textarea'
 import ToggleSwitchDemo from './ToggleSwitch'
 import ToggleSwitchDemoSource from '!!raw-loader!./ToggleSwitch'
 
-import CheckboxDemo from './Checkbox'
-import CheckboxDemoSource from '!!raw-loader!./Checkbox'
+import CheckboxesGroupDemo from './CheckboxesGroup'
+import CheckboxesGroupDemoSource from '!!raw-loader!./CheckboxesGroup'
 
-import RadioDemo from './Radio'
-import RadioDemoSource from '!!raw-loader!./Radio'
+import RadiosGroupDemo from './RadiosGroup'
+import RadiosGroupDemoSource from '!!raw-loader!./RadiosGroup'
 
 import SubmitButtonDemo from './SubmitButton'
 import SubmitButtonDemoSource from '!!raw-loader!./SubmitButton'
@@ -62,8 +62,8 @@ export const SingleCheckbox = props => <Demo Component={SingleCheckboxDemo} sour
 export const Slider = props => <Demo Component={SliderDemo} source={SliderDemoSource} {...props} />
 export const Textarea = props => <Demo Component={TextareaDemo} source={TextareaDemoSource} {...props} />
 export const ToggleSwitch = props => <Demo Component={ToggleSwitchDemo} source={ToggleSwitchDemoSource} {...props} />
-export const Checkbox = props => <Demo Component={CheckboxDemo} source={CheckboxDemoSource} {...props} />
-export const Radio = props => <Demo Component={RadioDemo} source={RadioDemoSource} {...props} />
+export const CheckboxesGroup = props => <Demo Component={CheckboxesGroupDemo} source={CheckboxesGroupDemoSource} {...props} />
+export const RadiosGroup = props => <Demo Component={RadiosGroupDemo} source={RadiosGroupDemoSource} {...props} />
 export const SubmitButton = props => <Demo Component={SubmitButtonDemo} source={SubmitButtonDemoSource} {...props} />
 export const LabelledControl = props => <Demo Component={LabelledControlDemo} source={LabelledControlDemoSource} {...props} />
 

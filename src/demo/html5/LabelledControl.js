@@ -2,7 +2,7 @@ import React from 'react'
 import Form from '@concrete-form/react-hook-form'
 import LabelledControl from '@concrete-form/html5/LabelledControl'
 import Input from '@concrete-form/html5/Input'
-import Radio from '@concrete-form/html5/Radio'
+import RadiosGroup from '@concrete-form/html5/RadiosGroup'
 import SingleCheckbox from '@concrete-form/html5/SingleCheckbox'
 
 const Demo = () => (
@@ -12,7 +12,7 @@ const Demo = () => (
     </LabelledControl>
 
     <LabelledControl label="Label NOT linked to the controls group">
-      <Radio name="demo-group" options={['foo', 'bar', 'baz']} />
+      <RadiosGroup name="demo-group" options={['foo', 'bar', 'baz']} />
     </LabelledControl>
 
     <LabelledControl label="Label NOT linked to boolean controls">

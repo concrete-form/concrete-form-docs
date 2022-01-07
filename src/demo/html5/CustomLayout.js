@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import Form from '@concrete-form/react-hook-form'
 import LabelledControl from '@concrete-form/html5/LabelledControl'
 import Input from '@concrete-form/html5/Input'
-import Checkbox from '@concrete-form/html5/Checkbox'
+import CheckboxesGroup from '@concrete-form/html5/CheckboxesGroup'
 
 import './customLayout.css'
 
@@ -101,7 +101,7 @@ const Demo = () => {
         </LabelledControl>
   
         <LabelledControl label="Label">
-          <Checkbox name="demo2" options={['Foo', 'bar', { label: 'Baz', value: 'Baz', props: { disabled: true } }]} />
+          <CheckboxesGroup name="demo2" options={['Foo', 'bar', { label: 'Baz', value: 'Baz', props: { disabled: true } }]} />
         </LabelledControl>
       </Form>
   )
