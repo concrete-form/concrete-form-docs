@@ -97,7 +97,7 @@ const InstallForm = () => {
       concreteFormDependencies[selectedForm],
       concreteFormDependencies[selectedUi],
       ...selectedActiveOptionnalDependencies
-    ].join(' \\\n    ')
+    ].join(' \\\n  ')
 
     return packageManager === 'yarn' ? `yarn add ${packages}` : `npm install ${packages}`
   }, [ packageManager, selectedForm, selectedUi, selectedActiveOptionnalDependencies ])

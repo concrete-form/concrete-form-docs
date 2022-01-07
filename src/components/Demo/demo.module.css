@@ -1,5 +1,6 @@
 .code {
-  margin-bottom: 0;
+  /* added !important because the css rules are not the same on production */
+  margin-bottom: 0!important; 
 }
 
 .code pre {
