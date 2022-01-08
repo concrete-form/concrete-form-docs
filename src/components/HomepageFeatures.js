@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Testing your forms with Concrete-form is <strong>EASY</strong> and <strong>FUN</strong>.
+        Testing your forms with Concrete form is <strong>EASY</strong> and <strong>FUN</strong>.
       </>
     ),
   },

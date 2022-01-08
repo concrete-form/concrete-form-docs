@@ -120,7 +120,7 @@ const InstallForm = () => {
 
         <Admonition type="note">
           You need to install <strong>2 packages</strong> to get started. (Form + UI)<br />
-          Select the optionnal dependencies that <strong>are NOT</strong> already installed on your project
+          Select the optional dependencies that <strong>are NOT</strong> already installed in your project
         </Admonition>
 
         <Grid container>
