@@ -73,8 +73,23 @@ const sidebars = {
           items: [
             { type: 'doc', id: 'controls/html5/intro' },
             { type: 'doc', id: 'controls/html5/api' },
-            { type: 'doc', id: 'controls/html5/control-options' },
+            { type: 'doc', id: 'controls/html5/controls-options' },
             { type: 'doc', id: 'controls/html5/advanced-layout-customization' },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Material-UI',
+          link: {
+            type: 'doc',
+            id: 'controls/mui/api',
+          },
+          className: 'sidebar-driver sidebar-mui',
+          items: [
+            { type: 'doc', id: 'controls/mui/intro' },
+            { type: 'doc', id: 'controls/mui/api' },
+            { type: 'doc', id: 'controls/mui/controls-options' },
+            { type: 'doc', id: 'controls/mui/advanced-layout-customization' },
           ]
         },
       ]

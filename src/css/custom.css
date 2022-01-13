@@ -48,6 +48,10 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   content: url('../../static/img/icons/html5.png');
 }
 
+.sidebar-mui > div > a::before {
+  content: url('../../static/img/icons/mui.png');
+}
+
 .sidebar-formik > div > a::before {
   content: url('../../static/img/icons/formik.png');
 }
