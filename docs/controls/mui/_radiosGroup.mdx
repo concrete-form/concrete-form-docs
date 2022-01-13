@@ -1,0 +1,44 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-group-radios--default-control)
+
+> a group of radio buttons<br />
+> **Render multiple: **[`<Radio />`](https://mui.com/components/radio-buttons/)
+
+<Props>
+  <CommonProps />
+
+  <Prop icon="cf.png" name="options" type="object">
+    Options to render*
+  </Prop>
+
+  <Prop icon="cf.png" name="orientation" type={<>"vertical"<br />| "horizontal"</>} defaultValue='"vertical"'>
+    Orientation of the checkboxes
+  </Prop>
+
+  <Prop icon="cf.png" name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>} defaultValue='"right"'>
+    Position of each label
+  </Prop>
+
+  <Prop icon="mui.png" name="formControlProps" type="object">
+    Forwarded to <a href="https://mui.com/api/form-control/" target="_blank"><code>{' <FormControl /> '}</code></a> wrapper
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <strong>each</strong> <a href="https://mui.com/components/radio-buttons/" target="_blank"><code>{' <Radio /> '}</code></a> components
+  </Prop>
+</Props>
+
+#### *Options format
+
+:::tip
+See [controls options](./controls-options) for full options specs.
+:::
+
+- Options props are forwarded to [`<Radio />`](https://mui.com/components/radio-buttons/) component.
+- Options groups are not supported.
+
+#### Example
+<Demo.RadiosGroup />
