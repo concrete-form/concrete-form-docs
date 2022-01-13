@@ -50,8 +50,8 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/', label: 'Examples', position: 'left'},
-          {to: '/', label: 'Demo', position: 'left'},
+          // {to: '/', label: 'Examples', position: 'left'},
+          // {to: '/', label: 'Demo', position: 'left'},
           {
             href: 'https://github.com/concrete-form/concrete-form',
             label: 'GitHub',

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 // import HomepageFeatures from '../components/HomepageFeatures';
 
@@ -26,15 +27,23 @@ function HomepageHeader() {
 }
 
 export default function Home() {
+  const docUrl = useBaseUrl('/docs');
+
+  useEffect(() => {
+    /* Temporarily redirecting to the doc until the home page is finished */
+    window.location.href = docUrl
+  }, [])
+
   const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      // title={siteConfig.title}
-      description={siteConfig.tagline}>
-      <HomepageHeader />
-      <main>
-        {/* <HomepageFeatures /> */}
-      </main>
-    </Layout>
-  );
+  // return (
+  //   <Layout
+  //     // title={siteConfig.title}
+  //     description={siteConfig.tagline}>
+  //     <HomepageHeader />
+  //     <main>
+  //       {/* <HomepageFeatures /> */}
+  //     </main>
+  //   </Layout>
+  // );
+  return null
 }
