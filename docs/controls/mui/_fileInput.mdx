@@ -1,0 +1,23 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-fileinput--default-control)
+
+> a file(s) upload control<br />
+> **Render: **[`<TextField type="file" />`](https://mui.com/components/text-fields/)
+
+:::note
+ At the moment, [Material-UI doesn't have a proper File input component](https://github.com/mui-org/material-ui/issues/9716). They have a dropzone feature on their roadmap and we might implement a [third party library](https://github.com/Yuvaleros/material-ui-dropzone) in the future to offer a better experience.
+:::
+
+<Props>
+  <CommonProps />
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <code>{' <TextField /> '}</code> component
+  </Prop>
+</Props>
+
+#### Example
+<Demo.FileInput />
