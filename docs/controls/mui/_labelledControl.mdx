@@ -1,0 +1,41 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/layout-labelledcontrol--with-single-control)
+
+> a wrapper that helps you create a 2 columns form<br />
+> **Render: **[`<Grid />`](https://mui.com/components/grid/) components for the columns
+
+:::info
+  By default, both columns are the same size (**width 50%**). On small devices, they are rendered vertically (**width 100%**).
+:::
+
+<Props>
+  <Prop icon="cf.png" name="label" type="string">
+    Label
+  </Prop>
+
+  <Prop icon="cf.png" name="labelPosition" type={<>top<br />| bottom<br />| left<br />| right</>} defaultValue="left">
+    Position of the label
+  </Prop>
+
+  <Prop icon="react.png" name="children" type="node">
+    Control to render
+  </Prop>
+
+  <Prop icon="mui.png" name="mainGridProps" type="object">
+    Forwarded to the <strong>main</strong> <a href="https://mui.com/components/grid/" target="_blank"><code>{'<Grid container />'}</code></a> component
+  </Prop>
+
+  <Prop icon="mui.png" name="labelGridProps" type="object">
+    Forwarded to the <strong>label</strong> <a href="https://mui.com/components/grid/" target="_blank"><code>{'<Grid item />'}</code></a> component
+  </Prop>
+
+  <Prop icon="mui.png" name="controlGridProps" type="object">
+    Forwarded to the <strong>control</strong> <a href="https://mui.com/components/grid/" target="_blank"><code>{'<Grid item />'}</code></a> component
+  </Prop>
+
+</Props>
+
+#### Example
+<Demo.LabelledControl />
