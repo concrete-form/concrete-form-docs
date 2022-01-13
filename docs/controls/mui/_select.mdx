@@ -1,0 +1,44 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-select--default-control)
+
+> a select that handles single or multiple values<br />
+> **Render: **[`<TextField select />`](https://mui.com/components/text-fields/#select)
+
+<Props>
+  <CommonProps />
+
+  <Prop icon="cf.png" name="options" type="object">
+    Options to render in the select*
+  </Prop>
+
+  <Prop icon="cf.png" name="allowEmpty" type="boolean" defaultValue="false">
+    if set to <code>true</code>, an empty option will be rendered on top.
+  </Prop>
+
+  <Prop icon="react.png" name="children" type="node">
+    An alternative to <code>options</code>. You can render your own children.
+  </Prop>
+
+  <Prop icon="mui.png" name="textFieldProps" type="object">
+    Forwarded to <a href="https://mui.com/components/text-fields/" target="_blank"><code>{' <TextField /> '}</code></a> outer component.
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <a href="https://mui.com/api/text-field/#props" target="_blank"><code>{' <TextField SelectProps={...} /> '}</code></a> <strong>property</strong>
+  </Prop>
+</Props>
+
+#### *Options format
+
+:::tip
+See [controls options](./controls-options) for full options specs.
+:::
+
+- Options props are forwarded to [`<option />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option) or [`<MenuItem />`](https://mui.com/api/menu-item/) elements. (depending on `native` value.)
+- Group props are forwarded to [`<optgroup />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup) or [`<ListSubheader />`](https://mui.com/api/list-subheader/) elements. (depending on `native` value.)
+
+#### Example
+<Demo.Select />
