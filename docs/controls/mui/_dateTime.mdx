@@ -1,0 +1,31 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-datetime--type-date)
+
+> a date, time or datetime picker. This control handles a **[date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object**. <br />
+> **Render: ** [`<DatePicker />`](https://mui.com/components/date-picker), [`<TimePicker />`](https://mui.com/components/time-picker), or [`<DateTimePicker />`](https://mui.com/components/date-time-picker), 
+
+:::tip
+Don't forget to install `@mui/lab` and to follow the [setup instructions provided by Material-UI](https://mui.com/components/date-picker/#requirements) in order to use the Pickers components.
+:::
+
+<Props>
+  <CommonProps />
+
+  <Prop icon="cf.png" name="type" type={<>"date"<br />| "time"<br />| "datetime"</>} defaultValue='"date"'>
+    Type of input to render
+  </Prop>
+
+  <Prop icon="mui.png" name="textFieldProps" type="object">
+    Forwarded to <a href="https://mui.com/components/text-fields/" target="_blank"><code>{' <TextField /> '}</code></a> inner component.
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <a href="https://mui.com/components/date-picker" target="_blank"><code>{' <DatePicker /> '}</code></a>, <a href="https://mui.com/components/time-picker" target="_blank"><code>{' <TimePicker /> '}</code></a> or <a href="https://mui.com/components/date-time-picker" target="_blank"><code>{' <DateTimePicker /> '}</code></a> component.<br /><em>(depending on <code>type</code> value)</em>
+  </Prop>
+</Props>
+
+#### Example
+<Demo.DateTime />
