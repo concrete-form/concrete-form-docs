@@ -1,0 +1,26 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-autocomplete--default-control)
+
+> a select control that can be filtered by typing<br />
+> **Render: **[`<Autocomplete />`](https://mui.com/components/autocomplete/)
+
+<Props>
+  <CommonProps />  
+
+  <Prop icon="mui.png" name="textFieldProps" type="object">
+    Forwarded to <a href="https://mui.com/components/text-fields/" target="_blank"><code>{' <TextField /> '}</code></a> inner component.
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <a href="https://mui.com/components/autocomplete/" target="_blank"><code>{' <Autocomplete /> '}</code></a> component.
+  </Prop>
+</Props>
+
+#### Options format
+Check [Material-UI doc](https://mui.com/api/autocomplete/#props) for options format.
+
+#### Example
+<Demo.Autocomplete />
