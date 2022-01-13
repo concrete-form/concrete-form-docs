@@ -8,12 +8,12 @@ import CheckboxesGroup from '@concrete-form/html5/CheckboxesGroup'
 import './customLayout.css'
 
 const ControlLayout = ({ name, control, errors }) => (
-  <div className="custom-control">
-    <div className="custom-control-control-wrapper">
+  <div className="custom-html5-control">
+    <div className="custom-html5-control-control-wrapper">
       { control }
     </div>
     { errors && (
-      <div className="custom-control-errors-wrapper">
+      <div className="custom-html5-control-errors-wrapper">
         { errors }
       </div>
     ) }
@@ -22,7 +22,7 @@ const ControlLayout = ({ name, control, errors }) => (
 
 const ErrorLayout = ({ errors }) => {
   return (
-    <div className="custom-errors">
+    <div className="custom-html5-errors">
       { errors.join(',') }
     </div>
   )
@@ -34,7 +34,7 @@ const ItemLabelLayout = ({
   labelPosition = 'left',
 }) => {
   return (
-    <label className={`custom-item-label concreteform-${labelPosition}`}>
+    <label className={`custom-html5-item-label concreteform-${labelPosition}`}>
       <div>{ label }</div>
       <div>{ control }</div>
     </label>
@@ -45,7 +45,7 @@ const ItemsGroupLayout = ({
   items,
 }) => {
   return (
-    <div className="custom-items-group">
+    <div className="custom-html5-items-group">
       { items }
     </div>
   )
@@ -56,7 +56,7 @@ const LabelLayout = ({
   htmlFor,
 }) => {
   return (
-    <label className="custom-label" htmlFor={htmlFor}>
+    <label className="custom-html5-label" htmlFor={htmlFor}>
       { label }
     </label>
   )
@@ -67,7 +67,7 @@ const LabelledControlLayout = ({
   label,
 }) => {
   return (
-    <div className="custom-labelled-control">
+    <div className="custom-html5-labelled-control">
       <div>{ label }</div>
       <div>{ control }</div>
     </div>

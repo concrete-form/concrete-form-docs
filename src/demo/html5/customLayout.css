@@ -1,4 +1,4 @@
-.custom-labelled-control {
+.custom-html5-labelled-control {
   display: flex;
   border: solid 3px rgb(0, 0, 255);
   background: rgb(216, 216, 255);
@@ -6,29 +6,29 @@
   margin: 15px
 }
 
-.custom-labelled-control > *:first-child {
+.custom-html5-labelled-control > *:first-child {
   width: 40%;
 }
 
-.custom-labelled-control > *:last-child {
+.custom-html5-labelled-control > *:last-child {
   width: 60%;
 }
 
-.custom-control {
+.custom-html5-control {
   border: solid 3px rgb(255, 20, 145);
   background: rgb(255, 219, 238);
   margin: 5px;
 }
-.custom-control-control-wrapper {
+.custom-html5-control-control-wrapper {
   padding: 5px;
 }
 
-.custom-control-errors-wrapper {
+.custom-html5-control-errors-wrapper {
   padding: 5px;
   border-top: solid 3px rgb(255, 20, 145);
 }
 
-.custom-errors {
+.custom-html5-errors {
   color: rgb(255, 0, 0);
   border: solid 3px rgb(255, 0, 0);
   background: rgb(255, 216, 216);
@@ -36,27 +36,27 @@
   margin: 5px;
 }
 
-.custom-item-label {
+.custom-html5-item-label {
   display: flex;
   border: solid 3px rgb(0, 100, 0);
   background: rgb(193, 255, 193);
   margin: 5px;
 }
-.custom-item-label.concreteform-right > *:first-child, .custom-item-label.concreteform-left > *:last-child {
+.custom-html5-item-label.concreteform-right > *:first-child, .custom-html5-item-label.concreteform-left > *:last-child {
   border-right: solid 3px rgb(0, 100, 0);
 }
-.custom-item-label > * {
+.custom-html5-item-label > * {
   padding: 5px;
 }
 
-.custom-items-group {
+.custom-html5-items-group {
   border: solid 3px rgb(255, 166, 0);
   background: rgb(255, 241, 216);
   padding: 5px;
   margin: 5px;
 }
 
-.custom-label {
+.custom-html5-label {
   display: inline-block;
   border: solid 3px rgb(128, 0, 128);
   background: rgb(255, 197, 255);

@@ -12,18 +12,18 @@ const Demo = () => (
 
     Labelled options :
     <Select name="select3" options={[
-      { label: 'Foooooo', value: 'foo' },
+      { label: 'First option', value: 'foo' },
       'bar',
-      { label: 'Barrrrr', value: 'baz', props: { disabled: true } },
+      { label: 'Third option', value: 'baz', props: { disabled: true } },
     ]} />
 
-    Groups (allowEmpty = true) :
+    Groups (allowEmpty) :
     <Select name="select4" allowEmpty options={[
       'foo',
       { group: 'Group 1', options: ['bar', 'baz'] }
     ]} />
 
-    Childrens (allowEmpty = true) :
+    Childrens (allowEmpty) :
     <Select name="select5" allowEmpty>
       <option value="foo">Foo</option>
       <option value="bar">Bar</option>
