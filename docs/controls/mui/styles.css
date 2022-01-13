@@ -1,0 +1,42 @@
+.cl {
+  display: inline-block;
+  font-size: 1em;
+  padding: .1rem .3rem;
+  font-weight: bold;
+}
+
+.cl-control {
+  color: rgb(255, 20, 145);
+  border: solid 3px rgb(255, 20, 145);
+  background: rgb(255, 219, 238);
+}
+
+.cl-errors {
+  color: rgb(255, 0, 0);
+  border: solid 3px rgb(255, 0, 0);
+  background: rgb(255, 216, 216);
+}
+
+.cl-itemLabel {
+  color: rgb(0, 100, 0);
+  border: solid 3px rgb(0, 100, 0);
+  background: rgb(193, 255, 193);
+}
+
+.cl-itemsGroup {
+  color: rgb(185, 122, 3);
+  border: solid 3px rgb(255, 166, 0);
+  background: rgb(255, 241, 216);
+}
+
+.cl-label {
+  color: rgb(128, 0, 128);
+  border: solid 3px rgb(128, 0, 128);
+  background: rgb(255, 197, 255);
+}
+
+.cl-labelledControl {
+  color: rgb(0, 0, 255);
+  border: solid 3px rgb(0, 0, 255);
+  background: rgb(216, 216, 255);
+}

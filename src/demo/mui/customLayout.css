@@ -1,0 +1,63 @@
+.custom-mui-labelled-control {
+  border: solid 3px rgb(0, 0, 255);
+  background: rgb(216, 216, 255);
+  margin: 15px 0;
+  padding: 5px;
+}
+
+.custom-mui-control {
+  border: solid 3px rgb(255, 20, 145) !important;
+  background: rgb(255, 219, 238);
+}
+
+.custom-mui-control-control-wrapper p {
+  margin: 0;
+}
+
+.custom-mui-control-control-wrapper {
+  padding: 10px;
+}
+
+.custom-mui-control-errors-wrapper {
+  border-top: solid 3px rgb(255, 20, 145);
+  padding-bottom: 10px;
+}
+
+.custom-mui-errors {
+  color: rgb(255, 0, 0);
+  border: solid 3px rgb(255, 0, 0);
+  background: rgb(255, 216, 216);
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.custom-mui-item-label {
+  border: solid 3px rgb(0, 100, 0);
+  background: rgb(193, 255, 193);
+  padding: 0;
+}
+.custom-mui-item-label > span:last-child {
+  border-left: solid 3px rgb(0, 100, 0);
+  padding-left: 8px;
+}
+
+.custom-mui-items-group {
+  border: solid 3px rgb(255, 166, 0);
+  background: rgb(255, 241, 216);
+  padding: 10px;
+}
+
+.custom-mui-items-group label {
+  margin: 2px 0;
+}
+
+.custom-mui-items-group label span {
+  padding: 8px;
+}
+
+.custom-mui-label {
+  display: inline-block;
+  border: solid 3px rgb(128, 0, 128);
+  background: rgb(255, 197, 255);
+  padding: 5px!important;
+}
