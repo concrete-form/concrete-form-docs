@@ -1,0 +1,35 @@
+import CommonProps from '../../../src/commonProps/controlProps.mdx'
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/controls-singlecheckbox--default-control)
+
+> a single checkbox that is similar to a toggle switch. Perfect for terms and conditions. This control handles **`boolean` values**.<br />
+> **Render: **[`<Checkbox />`](https://mui.com/components/checkboxes/)
+
+:::tip
+Great article about **[Checkbox vs Toggle Switch](https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8)**
+:::
+
+<Props>
+  <CommonProps />
+
+  <Prop icon="cf.png" name="label" type="node">
+    Label of the checkbox
+  </Prop>
+
+  <Prop icon="cf.png" name="labelPosition" type={<>"top"<br />| "bottom"<br />| "left"<br />| "right"</>} defaultValue='"right"'>
+    Position of the label
+  </Prop>
+
+  <Prop icon="mui.png" name="formControlProps" type="object">
+    Forwarded to <a href="https://mui.com/api/form-control/" target="_blank"><code>{' <FormControl /> '}</code></a> wrapper
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <a href="https://mui.com/components/checkboxes/" target="_blank"><code>{' <Checkbox /> '}</code></a> component
+  </Prop>
+</Props>
+
+#### Example
+<Demo.SingleCheckbox />
