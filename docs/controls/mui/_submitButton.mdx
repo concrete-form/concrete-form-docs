@@ -1,0 +1,45 @@
+import Props, { Prop, Divider } from '../../../src/components/Props'
+import * as Demo from '../../../src/demo/mui'
+
+[![Storybook](https://img.shields.io/badge/Storybook-%23E06A8C?style=flat-square&logo=storybook&labelColor=%23ececec)](https://master--6193c82ff0559c003a4fdcba.chromatic.com?path=/story/form-controls-submitbutton--default-control)
+
+> a submit button that displays a loading indicator while the form is submitting<br />
+> **Render **[`<Button type="submit" />`](https://mui.com/components/buttons/)
+
+:::info
+When submitting, this button will always be disabled. [`disableWhileSubmitting`](/docs/Form/react-hook-form/api#props) has no effect on this control. If the form contains errors, the button is also disabled.
+:::
+
+<Props>
+  <Prop icon="cf.png" name="displayLoading" type="boolean" defaultValue="true">
+    If <code>true</code>, a loading indicator is added to the label.<br/>
+    see <code>loadingComponent</code> below to customize what is appended.
+  </Prop>
+
+  <Prop icon="cf.png" name="loadingComponent" type="node" defaultValue="<CircularProgress />">
+    Loading indicator to append to the label when the form is submitting. (default: <a href="https://mui.com/components/progress/#circular" target="_blank"><code> {"<CircularProgress />"} </code></a>)
+  </Prop>
+
+  <Prop icon="cf.png" name="alternateLoadingContent" type="node">
+    If provided, this replaces the <strong>whole</strong> label of the button when submitting.
+  </Prop>
+
+  <Prop icon="mui.png" name="color" type="string" defaultValue='"primary"'>
+    <a href="https://mui.com/api/button/#props" target="_blank">Material-UI <code> color </code></a> property <strong>defaulted to "primary"</strong>.
+  </Prop>
+
+  <Prop icon="mui.png" name="variant" type="string" defaultValue='"contained"'>
+    <a href="https://mui.com/api/button/#props" target="_blank">Material-UI <code> variant </code></a> property <strong>defaulted to "contained"</strong>.
+  </Prop>
+
+  <Prop icon="mui.png" name="children" type="node">
+    Content of the <code>{' <Button /> '}</code>
+  </Prop>
+
+  <Prop icon="mui.png" name="{...props}" type="object">
+    Forwarded to <a href="https://mui.com/components/buttons/" target="_blank"><code>{' <Button /> '}</code></a> component
+  </Prop>
+</Props>
+
+#### Example
+<Demo.SubmitButton />
