@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkconcrete_form_doc=self.webpackChunkconcrete_form_doc||[]).push([[195],{7390:function(n,c,e){e.r(c),e.d(c,{default:function(){return r}});var o=e(7294),t=(e(9910),e(8746),e(6832)),f=e(1402);function r(){var n=(0,f.Z)("/docs");(0,o.useEffect)((function(){window.location.href=n}),[]);(0,t.Z)().siteConfig;return null}}}]);
