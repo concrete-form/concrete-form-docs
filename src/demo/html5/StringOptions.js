@@ -1,12 +1,12 @@
 /*exclude-start*/
 import React from 'react'
 import Form from '@concrete-form/react-hook-form'
-import RadiosGroup from '@concrete-form/html5/RadiosGroup'
+import RadioGroup from '@concrete-form/html5/RadioGroup'
 
 const Demo = () => (
   <Form>
     {/* exclude-end */}
-    <RadiosGroup name="demo" options={['foo', 'bar', 'baz']} />
+    <RadioGroup name="demo" options={['foo', 'bar', 'baz']} />
     {/* exclude-start */}
   </Form>
 )

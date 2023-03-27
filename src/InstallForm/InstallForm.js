@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import { useForm } from 'react-hook-form'
 import Form from '@concrete-form/react-hook-form'
-import RadiosGroup from '@concrete-form/mui/RadiosGroup'
-import CheckboxesGroup from '@concrete-form/mui/CheckboxesGroup'
+import RadioGroup from '@concrete-form/mui/RadioGroup'
+import CheckboxGroup from '@concrete-form/mui/CheckboxGroup'
 import CodeBlock from '@theme/CodeBlock'
 import Admonition from '@theme/Admonition'
 import Grid from '@mui/material/Grid'
@@ -28,14 +28,14 @@ const concreteFormDependencies = {
 const optionnalDependencies = {
   reactHookForm: {
     'react-hook-form': <code>React Hook Form</code>,
-    'yup @hookform/resolvers': <><code>Yup</code> (recommended validation library)</>,
+    'yup @hookform/resolvers': <><code>Yup</code> + resolver (recommended validation library)</>,
   },
   formik: {
     'formik': <code>Formik</code>,
     'yup': <><code>Yup</code> (recommended validation library)</>,
 },
   mui: {
-    '@mui/material @emotion/react @emotion/styled': <><code>Material-UI</code> (include <code>@emotion/react</code> + <code>@emotion/styled</code>)</>,
+    '@mui/material @emotion/react @emotion/styled': <><code>Material-UI</code> (with <code>@emotion/react</code> + <code>@emotion/styled</code>)</>,
     '@mui/x-date-pickers': <><code>@mui/x-date-pickers</code> (needed for <code>DateTime</code> inputs)</>,
     'date-fns': <><code>Date-fns</code> (recommanded date library needed for <code>DateTime</code> inputs)</>,
   },
@@ -111,7 +111,7 @@ const InstallForm = () => {
 
         <h3>Package manager</h3>
         <div className={styles.options}>
-          <RadiosGroup
+          <RadioGroup
             name="packageManager"
             orientation="horizontal"
             options={[
@@ -130,7 +130,7 @@ const InstallForm = () => {
 
             <h3>Form implementation</h3>
             <div className={styles.options}>
-              <RadiosGroup
+              <RadioGroup
                 name="form"
                 options={[
                   {label: <Library name="React Hook Form" logo="rhf.png" />, value: 'reactHookForm'},
@@ -144,7 +144,7 @@ const InstallForm = () => {
 
             <h3>UI implementation</h3>
             <div className={styles.options}>
-              <RadiosGroup
+              <RadioGroup
                 name="ui"
                 options={[
                   {label: <Library name="HTML5" logo="html5.png" />, value: 'html5'},
@@ -159,7 +159,7 @@ const InstallForm = () => {
         <h3>Optionnal dependencies</h3>
 
         <div className={styles.options}>
-          <CheckboxesGroup
+          <CheckboxGroup
             name="optionnalDependencies"
             options={optionnalDependenciesOptions}
           />
