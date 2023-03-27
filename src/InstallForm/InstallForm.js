@@ -27,14 +27,17 @@ const concreteFormDependencies = {
 
 const optionnalDependencies = {
   reactHookForm: {
-    'react-hook-form': 'React Hook Form',
+    'react-hook-form': <code>React Hook Form</code>,
+    'yup @hookform/resolvers': <><code>Yup</code> (recommended validation library)</>,
   },
   formik: {
-    'formik': 'Formik',
+    'formik': <code>Formik</code>,
+    'yup': <><code>Yup</code> (recommended validation library)</>,
 },
   mui: {
-    '@mui/material @emotion/react @emotion/styled': 'Material-UI',
-    '@mui/lab': <>Material-UI Lab (needed for <code>DateTime</code> inputs)</>,
+    '@mui/material @emotion/react @emotion/styled': <><code>Material-UI</code> (include <code>@emotion/react</code> + <code>@emotion/styled</code>)</>,
+    '@mui/x-date-pickers': <><code>@mui/x-date-pickers</code> (needed for <code>DateTime</code> inputs)</>,
+    'date-fns': <><code>Date-fns</code> (recommanded date library needed for <code>DateTime</code> inputs)</>,
   },
 }
 
@@ -119,8 +122,7 @@ const InstallForm = () => {
         </div>
 
         <Admonition type="note">
-          You need to install <strong>2 packages</strong> to get started. (Form + UI)<br />
-          Select the optional dependencies that <strong>are NOT</strong> already installed in your project
+          You need to install <strong>2 packages</strong> to get started. (Form + UI)
         </Admonition>
 
         <Grid container>
