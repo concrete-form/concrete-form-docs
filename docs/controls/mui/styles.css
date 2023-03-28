@@ -1,55 +1,41 @@
-.html5 input[type="checkbox"] {
-  margin-right: 8px;
-}
-
-.html5 .concreteform-control {
-  font-family: arial;
-  font-size: 16px;
-}
-
-.html5 .concreteform-control {
-  font-family: arial;
-  font-size: 16px;
-}
-
-.html5 .cl {
+.mui .cl {
   display: inline-block;
   font-size: 1em;
   padding: .1rem .3rem;
   font-weight: bold;
 }
 
-.html5 .cl-control {
+.mui .cl-control {
   color: rgb(255, 20, 145);
   border: solid 3px rgb(255, 20, 145);
   background: rgb(255, 219, 238);
 }
 
-.html5 .cl-errors {
+.mui .cl-errors {
   color: rgb(255, 0, 0);
   border: solid 3px rgb(255, 0, 0);
   background: rgb(255, 216, 216);
 }
 
-.html5 .cl-itemLabel {
+.mui .cl-itemLabel {
   color: rgb(0, 100, 0);
   border: solid 3px rgb(0, 100, 0);
   background: rgb(193, 255, 193);
 }
 
-.html5 .cl-itemsGroup {
+.mui .cl-itemsGroup {
   color: rgb(185, 122, 3);
   border: solid 3px rgb(255, 166, 0);
   background: rgb(255, 241, 216);
 }
 
-.html5 .cl-label {
+.mui .cl-label {
   color: rgb(128, 0, 128);
   border: solid 3px rgb(128, 0, 128);
   background: rgb(255, 197, 255);
 }
 
-.html5 .cl-labelledControl {
+.mui .cl-labelledControl {
   color: rgb(0, 0, 255);
   border: solid 3px rgb(0, 0, 255);
   background: rgb(216, 216, 255);
