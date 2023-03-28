@@ -1,12 +1,12 @@
 ---
 title: API
 hide_title: true
-description: Material-UI controls API for Concrete Form
-pagination_prev: controls/mui/intro
-pagination_next: controls/mui/controls-options
+description: Tailwind CSS controls API for Concrete Form
+pagination_prev: controls/tailwind-css/intro
+# pagination_next: 
 ---
 
-import Props, { Prop, Divider } from '../../../src/components/Props'
+import './styles.css'
 
 import Header from './_header.mdx'
 
@@ -24,9 +24,22 @@ import RadioGroup from './_radioGroup.mdx'
 import SubmitButton from './_submitButton.mdx'
 import LabelledControl from './_labelledControl.mdx'
 
-# Material-UI Controls API
+<h1 style={{ marginBottom: 0 }}>Tailwind CSS</h1>
+<em>(uses HTML5 implementation)</em>
+<br /><br />
 
 <Header />
+
+:::info
+<strong>You need to configure Tailwind on top of HTML5 implementation.</strong>
+<ul>
+  <li><a href="/docs/controls/tailwind-css/intro">Configure <strong>Tailwind CSS</strong> with <strong>Concrete-form</strong></a></li>
+  <li><a href="/docs/controls/html5/api">Check the <strong>HTML5 API</strong></a></li>
+  <li><a href="https://tailwindcss.com/docs/utility-first" target="_blank">Check <strong>Tailwind CSS</strong> documentation</a></li>
+  </ul>
+:::
+
+<div className="tailwind-css">
 
 ## Controls
 
@@ -77,3 +90,5 @@ import LabelledControl from './_labelledControl.mdx'
 
 ### `<LabelledControl />`
 <LabelledControl />
+
+</div>

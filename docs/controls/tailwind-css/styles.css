@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom css */
+
+.tailwind-css input[type="checkbox"],
+.tailwind-css input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* to avoid resetting other forms control, we add a "tailwind-css" wrapper for the tailwind form plugin */
+
+/* @layer component {
+  .tailwind-css input[type='text'], .tailwind-css input[type='email'], .tailwind-css input[type='url'], .tailwind-css input[type='password'], .tailwind-css input[type='number'], .tailwind-css input[type='date'], .tailwind-css input[type='datetime-local'], .tailwind-css input[type='month'], .tailwind-css input[type='search'], .tailwind-css input[type='tel'], .tailwind-css input[type='time'], .tailwind-css input[type='week'] {
+    @apply form-input;
+  }
+  
+  .tailwind-css textarea {
+    @apply form-textarea;
+  }
+
+  .tailwind-css select:not(select[multiple]) {
+    @apply form-select;
+  }
+
+  .tailwind-css select[multiple] {
+    @apply form-multiselect;
+  }
+
+  .tailwind-css input[type='checkbox'] {
+    @apply form-checkbox border-solid;
+  }
+} */
+
+/**************************************************/
+/* bind concrete-form classes to tailwind classes */
+/**************************************************/
+
+@layer components {
+  /* errors */
+
+.tailwind-css .concreteform-control [aria-invalid=true] {
+  @apply border-red-600 text-red-600;
+}
+
+.tailwind-css .concreteform-control input:not([type=checkbox]):not([type=radio]):not([type=range])[aria-invalid=true]:focus,
+.tailwind-css .concreteform-control textarea[aria-invalid=true]:focus {
+  @apply outline outline-current;
+}
+
+.tailwind-css .concreteform-control-errors {
+  @apply list-none m-0 p-1 text-red-600;
+}
+
+/* posititons */
+
+.tailwind-css .concreteform-left {
+  @apply flex flex-row-reverse justify-start;
+}
+
+.tailwind-css .concreteform-right {
+  @apply flex flex-row;
+}
+
+.tailwind-css .concreteform-top {
+  @apply flex flex-col-reverse;
+}
+
+.tailwind-css .concreteform-bottom {
+  @apply flex flex-col;
+}
+
+/* items group (radio / checkbox items) */
+
+.tailwind-css .concreteform-items-group {
+  @apply flex;
+}
+
+.tailwind-css .concreteform-items-group-horizontal {
+  @apply flex-row;
+}
+
+.tailwind-css .concreteform-items-group-vertical {
+  @apply flex-col;
+}
+
+/* labelled input (input is always 60%) */
+
+.tailwind-css .concreteform-labelled-control.concreteform-left > *:first-child,
+.tailwind-css .concreteform-labelled-control.concreteform-right > *:first-child {
+  @apply w-3/5;
+}
+.tailwind-css .concreteform-labelled-control.concreteform-left > *:last-child,
+.tailwind-css .concreteform-labelled-control.concreteform-right > *:last-child {
+  @apply w-2/5;
+}
+
+/* toggle switch */
+
+.tailwind-css .concreteform-toggle-switch {
+  @apply inline-block relative w-8 h-5 cursor-pointer my-0 ml-1 mr-2;
+}
+
+.tailwind-css .concreteform-toggle-switch > input {
+  @apply absolute opacity-0 w-0 h-0;
+}
+
+.tailwind-css .concreteform-toggle-switch .concreteform-toggle-switch-slider {
+  @apply w-full h-full bg-gray-400 rounded-[20px];
+}
+
+.tailwind-css .concreteform-toggle-switch .concreteform-toggle-switch-slider:before {
+	@apply content-[''] absolute top-0 left-0 w-5 h-5 rounded-[50%] bg-white duration-[250ms] scale-[.7];
+}
+
+.tailwind-css .concreteform-toggle-switch > input:checked + .concreteform-toggle-switch-slider:before {
+  @apply left-[36%];
+}
+
+.tailwind-css .concreteform-toggle-switch > input:checked + .concreteform-toggle-switch-slider {
+  @apply bg-blue-500;
+}
+
+@-moz-document url-prefix() {
+.tailwind-css .concreteform-toggle-switch > input:checked + .concreteform-toggle-switch-slider {
+  @apply bg-blue-600;
+}
+}
+
+.tailwind-css .concreteform-toggle-switch > input:disabled + .concreteform-toggle-switch-slider {
+  @apply cursor-default duration-[0s] bg-gray-200;
+}
+
+.tailwind-css .concreteform-toggle-switch > input:checked:disabled + .concreteform-toggle-switch-slider {
+  @apply bg-blue-200;
+}
+
+@-moz-document url-prefix() {
+  .tailwind-css .concreteform-toggle-switch > input:checked:disabled + .concreteform-toggle-switch-slider {
+    @apply bg-blue-300;
+  }
+}
+}

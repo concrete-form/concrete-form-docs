@@ -43,7 +43,6 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   top: 4px;
 }
 
-
 .sidebar-html5 > div > a::before {
   content: url('../../static/img/icons/html5.png');
 }
@@ -52,10 +51,18 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   content: url('../../static/img/icons/mui.png');
 }
 
+.sidebar-tw > div > a::before {
+  content: url('../../static/img/icons/tailwind-css.png');
+}
+
 .sidebar-formik > div > a::before {
   content: url('../../static/img/icons/formik.png');
 }
 
 .sidebar-react-hook-form > div > a::before {
   content: url('../../static/img/icons/rhf.png');
+}
+
+table > thead {
+  background: transparent;
 }

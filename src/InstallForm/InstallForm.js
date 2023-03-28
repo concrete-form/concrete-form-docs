@@ -23,6 +23,7 @@ const concreteFormDependencies = {
   'formik': '@concrete-form/formik',
   'html5': '@concrete-form/html5',
   'mui': '@concrete-form/mui',
+  'tw': '@concrete-form/html5',
 }
 
 const optionnalDependencies = {
@@ -39,6 +40,10 @@ const optionnalDependencies = {
     '@mui/x-date-pickers': <><code>@mui/x-date-pickers</code> (needed for <code>DateTime</code> inputs)</>,
     'date-fns': <><code>Date-fns</code> (recommanded date library needed for <code>DateTime</code> inputs)</>,
   },
+  tw: {
+    'tailwindcss': <code>Tailwind CSS</code>,
+    '@tailwindcss/forms': <><code>@tailwindcss/forms</code> (form plugin for Tailwind)</>
+  }
 }
 
 const InstallForm = () => {
@@ -149,6 +154,7 @@ const InstallForm = () => {
                 options={[
                   {label: <Library name="HTML5" logo="html5.png" />, value: 'html5'},
                   {label: <Library name="Material-UI" logo="mui.png" />, value: 'mui'},
+                  {label: <Library name="Tailwind-CSS" logo="tailwind-css.png" />, value: 'tw'},
                 ]}
               />
             </div>

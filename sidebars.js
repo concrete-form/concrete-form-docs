@@ -92,6 +92,19 @@ const sidebars = {
             { type: 'doc', id: 'controls/mui/advanced-layout-customization' },
           ]
         },
+        {
+          type: 'category',
+          label: 'Tailwind CSS',
+          link: {
+            type: 'doc',
+            id: 'controls/tailwind-css/api',
+          },
+          className: 'sidebar-driver sidebar-tw',
+          items: [
+            { type: 'doc', id: 'controls/tailwind-css/intro' },
+            { type: 'doc', id: 'controls/tailwind-css/api' },
+          ]
+        },
       ]
     },
     { type: 'doc', id: 'controls-list' },
