@@ -7,15 +7,15 @@ import SingleCheckbox from '@concrete-form/mui/SingleCheckbox'
 
 const Demo = () => (
   <Form>
-    <LabelledControl label="Label linked to the control">
+    <LabelledControl label="Label linked to the control" labelPosition="left">
       <Input name="demo-single" />
     </LabelledControl>
 
-    <LabelledControl label="Label NOT linked to the controls group">
+    <LabelledControl label="Label NOT linked to the controls group" labelPosition="left">
       <RadioGroup name="demo-group" options={['foo', 'bar', 'baz']} />
     </LabelledControl>
 
-    <LabelledControl label="Label NOT linked to boolean controls">
+    <LabelledControl label="Label NOT linked to boolean controls" labelPosition="left">
       <SingleCheckbox name="demo-bool" label="THIS is the real label" />
     </LabelledControl>
   </Form>
