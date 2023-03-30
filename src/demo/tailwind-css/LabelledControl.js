@@ -7,15 +7,15 @@ import SingleCheckbox from '@concrete-form/html5/SingleCheckbox'
 
 const Demo = () => (
   <Form>
-    <LabelledControl label="Label linked to the control">
+    <LabelledControl label="Label linked to the control" labelPosition="left">
       <Input name="demo-single" className="/* exclude-start */ form-input border-solid /* exclude-end */ mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
     </LabelledControl>
 
-    <LabelledControl label="Label NOT linked to the controls group">
+    <LabelledControl label="Label NOT linked to the controls group" labelPosition="left">
       <RadioGroup name="demo-group" options={['foo', 'bar', 'baz']} className="/* exclude-start */ form-radio border-solid /* exclude-end */ rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" />
     </LabelledControl>
 
-    <LabelledControl label="Label NOT linked to boolean controls">
+    <LabelledControl label="Label NOT linked to boolean controls" labelPosition="left">
       <SingleCheckbox name="demo-bool" label="THIS is the real label" className="/* exclude-start */ form-checkbox border-solid /* exclude-end */ rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 " />
     </LabelledControl>
 
