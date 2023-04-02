@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@concrete-form/formik": "^1.0.6",
-    "@concrete-form/html5": "^1.0.6",
+    "@concrete-form/html5": "^1.0.9",
     "@concrete-form/mui": "^1.0.1",
     "@concrete-form/react-hook-form": "^1.0.8",
     "@docusaurus/core": "2.4.0",

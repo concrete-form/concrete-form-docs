@@ -2375,10 +2375,10 @@
   dependencies:
     "@concrete-form/core" "^1.0.8"
 
-"@concrete-form/html5@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@concrete-form/html5/-/html5-1.0.6.tgz#5f68e2f3f4b85387463fb6c3908d021432622471"
-  integrity sha512-SlX/jT0rKgcpWew4d6Rk82djn9qqBAYorhab9brsfG0cwmx6XTNZ5doRr/kLD/g+szIJxqJltbwQ5I+sgjzCfg==
+"@concrete-form/html5@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@concrete-form/html5/-/html5-1.0.9.tgz#69f245292b49b5f802418942485a0a14a94ac6b4"
+  integrity sha512-GbYmveEZvO1ZMN+2xD9aa43wB4Dzpm0lD0CQcI4uhBGQQsKKEspgQ5a85ylZ5gWS7CcLB5jA1QvnUuQURr79pw==
 
 "@concrete-form/mui@^1.0.1":
   version "1.0.1"

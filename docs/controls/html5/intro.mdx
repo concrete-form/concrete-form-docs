@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Install & Setup
 hide_title: true
 pagination_prev: null
 ---
@@ -21,13 +21,23 @@ npm install @concrete-form/html5
 Not sure which version to install ? [check this](/docs/getting-started/install#choosing-the-right-version)
 
 ## Styles
+### Minimal styles (*recommended*)
+> ```jsx
+> import '@concrete-form/html5/base.css'
+> ```
+> https://github.com/concrete-form/html5/blob/main/src/base.css
+>
+> - Handles the position of the label (left, right, top or bottom)
+> - Handles orientation of the group of items (horizontally or vertically)
 
-```jsx
-import '@concrete-form/html5/styles.css'
-```
-> These minimal styles are not mandatory.
 
-- Adds red color to errors and invalid controls
-- Handles the position of the label (left, right, top or bottom)
-- Handles orientation of the group of items (horizontally or vertically)
-- Adds styles to `ToggleSwitch` checkbox
+### Full styles
+> **Note**: Even though it's called "full" styles, Concrete-form doesn't make any design decisions. You must implement your own styles.
+> ```jsx
+> import '@concrete-form/html5/styles.css'
+> ```
+> https://github.com/concrete-form/html5/blob/main/src/styles.css
+>
+> - Includes <code>base.css</code>
+> - Adds red color to errors and invalid controls
+> - Adds styles to `ToggleSwitch` checkbox

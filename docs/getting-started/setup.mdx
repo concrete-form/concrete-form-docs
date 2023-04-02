@@ -1,0 +1,55 @@
+---
+pagination_next: controls-list
+---
+
+# Setup
+
+Once installed, you can start using concrete-form right away, but here's the recommended setup.<br />
+We recommend to **re-export** each components.
+
+## Benefits of re-exporting
+ - You app doesn't depend too much on Concrete-form (easy to remove or replace)
+ - You can change the default behavior or add features globally to all your forms
+ - You can create custom (*not concrete-form related*) form controls
+
+## Example
+`src/components/Form.tsx`
+```tsx
+export { default } from '@concrete-form/react-hook-form/Form'
+
+export { default as LabelledControl } from '@concrete-form/html5/LabelledControl'
+export { default as Input } from '@concrete-form/html5/Input'
+export { default as DateTime } from '@concrete-form/html5/DateTime'
+export { default as FileInput } from '@concrete-form/html5/FileInput'
+export { default as Select } from '@concrete-form/html5/Select'
+export { default as SingleCheckbox } from '@concrete-form/html5/SingleCheckbox'
+export { default as Slider } from '@concrete-form/html5/Slider'
+export { default as Textarea } from '@concrete-form/html5/Textarea'
+export { default as ToggleSwitch } from '@concrete-form/html5/ToggleSwitch'
+export { default as CheckboxGroup } from '@concrete-form/html5/CheckboxGroup'
+export { default as RadioGroup } from '@concrete-form/html5/RadioGroup'
+export { default as SubmitButton } from '@concrete-form/html5/SubmitButton'
+```
+
+### Usage
+
+You can now import controls like that on your project:
+
+```tsx
+import Form, { Input, SubmitButton } from 'src/components/Form'
+```
+
+### Customize
+
+Here's how you can change default behavior of a control
+
+```tsx
+import CfInput, { InputProps } from '@concrete-form/html5/Input'
+
+export const Input: React.FC<InputProps> = ({ ...props }) => (
+  <CfInput
+    {...props}
+    // your logic here
+  />
+)
+```

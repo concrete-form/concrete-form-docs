@@ -22,6 +22,17 @@ import * as Demo from '../../../src/demo/html5'
     Position of each label
   </Prop>
 
+  <Prop icon="html5.png" name="itemContainerProps" type={<>object<br />| function</>}>
+    Forwarded to <strong>every</strong> option container (<code>{` <label /> `}</code> element).<br />
+    The container contains the <strong>radio</strong> and the <strong>label</strong>.
+    <br /><br /><strong>Function:</strong> If a function is provided, that function will receive option's props (if available) and must return props for the item container.
+  </Prop>
+
+  <Prop icon="html5.png" name="itemLabelContainerProps" type={<>object<br />| function</>}>
+    If provided, the label will be wrapped with a <code>{` <div /> `}</code> element with the given props.
+    <br /><br /><strong>Function:</strong> If a function is provided, that function will receive option's props (if available) and must return props for the label container.
+  </Prop>
+
   <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <strong>each</strong> <code>{' <input /> '}</code> element
   </Prop>

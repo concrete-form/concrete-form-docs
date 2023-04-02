@@ -22,6 +22,7 @@ const sidebars = {
       items: [
         { type: 'doc', id: 'getting-started/intro' },
         { type: 'doc', id: 'getting-started/install' },
+        { type: 'doc', id: 'getting-started/setup' },
       ]
     },
     {

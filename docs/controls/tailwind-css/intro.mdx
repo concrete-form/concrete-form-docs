@@ -1,9 +1,8 @@
 ---
-title: Introduction
+title: Install & Setup
 hide_title: true
 pagination_prev: null
 ---
-
 import Header from './_header.mdx'
 
 <h1 style={{ marginBottom: 0 }}>Tailwind CSS</h1>
@@ -26,15 +25,198 @@ Not sure which version to install ? [check this](/docs/getting-started/install#c
 
 **tailwindcss**
 
-If `Tailwind CSS` is not already installed on your projet, you'll need to install and configure it. [Get started with Tailwind CSS](https://tailwindcss.com/docs/installation/framework-guides).
+[Get started with Tailwind CSS](https://tailwindcss.com/docs/installation/framework-guides).
 
-**@tailwindcss/forms**
+**@tailwindcss/forms** (recommended)
 
-We strongly recommend the official form plugin.
 > Provides a basic reset for form styles that makes form elements easy to override with utilities.
 
-[Github link](https://github.com/tailwindlabs/tailwindcss-forms)
+[github.com/tailwindlabs/tailwindcss-forms](https://github.com/tailwindlabs/tailwindcss-forms)
 
 ## setup
 
-Coming soon
+### Styles
+Forms global CSS
+ - Adds red color for errors (feel free to change it)
+ - Handles the position of the label (left, right, top or bottom)
+ - Handles orientation of the group of items (horizontally or vertically)
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* errors */
+
+.concreteform-control [aria-invalid=true] {
+  @apply border-red-600 text-red-600 focus:border-red-600 focus:ring-red-600;
+  @apply dark:border-red-500 dark:text-red-500 dark:focus:border-red-500 dark:focus:ring-red-500;
+}
+.concreteform-control-errors {
+  @apply list-none m-0 p-1 text-sm text-red-600;
+  @apply dark:text-red-500;
+}
+
+/* positionning */
+
+.concreteform-left {
+  @apply flex flex-row-reverse justify-start;
+}
+.concreteform-right {
+  @apply flex flex-row;
+}
+.concreteform-top {
+  @apply flex flex-col-reverse;
+}
+.concreteform-bottom {
+  @apply flex flex-col;
+}
+
+/* items group (radio / checkbox items) */
+
+.concreteform-items-group {
+  @apply flex;
+}
+.concreteform-items-group-horizontal {
+  @apply flex-row;
+}
+.concreteform-items-group-vertical {
+  @apply flex-col;
+}
+```
+
+### Apply Tailwind CSS classes to the controls
+
+:::tip
+We [recommend re-exporting form components](/docs/getting-started/setup).<br />This is especially useful for Tailwind implementation to set default CSS classes!
+:::
+
+#### Example
+
+[Flowbite](https://flowbite.com/) is a collection of components.<br />
+[Flowbite demo - codesandbox](https://codesandbox.io/p/sandbox/zealous-dew-s787p1?file=%2Fsrc%2FApp.tsx)
+
+#### Template to customize CSS classes
+
+`src/components/Form.tsx`
+```tsx
+import CfLabelledControl, { LabelledControlProps } from '@concrete-form/html5/LabelledControl'
+import CfInput, { InputProps } from '@concrete-form/html5/Input'
+import CfDateTime, { DateTimeProps } from '@concrete-form/html5/DateTime'
+import CfFileInput, { FileInputProps } from '@concrete-form/html5/FileInput'
+import CfSelect, { SelectProps } from '@concrete-form/html5/Select'
+import CfSingleCheckbox, { SingleCheckboxProps } from '@concrete-form/html5/SingleCheckbox'
+import CfSlider, { SliderProps } from '@concrete-form/html5/Slider'
+import CfTextarea, { TextareaProps } from '@concrete-form/html5/Textarea'
+import CfToggleSwitch, { ToggleSwitchProps } from '@concrete-form/html5/ToggleSwitch'
+import CfCheckboxGroup, { CheckboxGroupProps } from '@concrete-form/html5/CheckboxGroup'
+import CfRadioGroup, { RadioGroupProps } from '@concrete-form/html5/RadioGroup'
+import CfSubmitButton, { SubmitButtonProps } from '@concrete-form/html5/SubmitButton'
+
+export { default } from '@concrete-form/react-hook-form/Form'
+
+export const LabelledControl: React.FC<LabelledControlProps> = ({ label, ...props }) => (
+  <CfLabelledControl
+    label={<div className="...">{ label }</div>}
+    labelContainerProps={{ className: '...' }}
+    controlContainerProps={{ className: '...' }}
+    {...props}
+  />
+)
+
+export const Input: React.FC<InputProps> = props => (
+  <CfInput
+    className="..."
+    {...props}
+  />
+)
+
+export const DateTime: React.FC<DateTimeProps> = props => (
+  <CfDateTime
+    className="..."
+    {...props}
+  />
+)
+
+export const FileInput: React.FC<FileInputProps> = props => (
+  <CfFileInput
+    className="..."
+    {...props}
+  />
+)
+
+export const Select: React.FC<SelectProps> = props => (
+  <CfSelect
+    className="..."
+    {...props}
+  />
+)
+
+export const SingleCheckbox: React.FC<SingleCheckboxProps> = ({ label, ...props }) => (
+  <CfSingleCheckbox
+    label={<div className="...">{ label }</div>}
+    className="..."
+    {...props}
+  />
+)
+
+export const Slider: React.FC<SliderProps> = props => (
+  <CfSlider
+    className="..."
+    {...props}
+  />
+)
+
+export const Textarea: React.FC<TextareaProps> = props => (
+  <CfTextarea
+    className="..."
+    {...props}
+  />
+)
+
+export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, ...props }) => (
+  <CfToggleSwitch
+    label={<div className="...">{ label }</div>}
+    className="..."
+    toggleSwitchContainerProps={{ className: '...' }}
+    toggleSwitchSliderProps={{ className: '...' }}
+    {...props}
+  />
+)
+
+export const CheckboxGroup: React.FC<CheckboxGroupProps> = props => {
+  return (
+    <CfCheckboxGroup
+      className="..."
+      itemLabelContainerProps={({ disabled = false }) => ({
+        className: disabled
+          ? '...'
+          : '...',
+      })}
+      {...props}
+    />
+  )
+}
+
+export const RadioGroup: React.FC<RadioGroupProps> = props => {
+  return (
+    <CfRadioGroup
+      className="..."
+      itemLabelContainerProps={({ disabled = false }) => ({
+        className: disabled
+          ? '...'
+          : '...',
+      })}
+      {...props}
+    />
+  )
+}
+
+export const SubmitButton: React.FC<SubmitButtonProps> = props => (
+  <CfSubmitButton
+    className="..."
+    {...props}
+  />
+)
+
+```

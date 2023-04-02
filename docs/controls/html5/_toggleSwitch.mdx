@@ -11,7 +11,7 @@ import * as Demo from '../../../src/demo/html5'
 Great article about **[Checkbox vs Toggle Switch](https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8)**
 :::
 :::note
-We render a checkbox with some CSS since there is no toggle switch natively in HTML5. Don't forget to import our CSS file or add your own.
+In HTML5, a toggle switch is a checkbox with CSS. You need to use our CSS import or create your own. Additionnaly, you can use the available props to customize each HTML elements.
 :::
 
 <Props>
@@ -25,9 +25,28 @@ We render a checkbox with some CSS since there is no toggle switch natively in H
     Position of the label
   </Prop>
 
+  <Prop icon="html5.png" name="containerProps" type="object">
+    Forwarded to the container (<code>{` <label /> `}</code> element).<br />
+    The container contains the <strong>toggle switch</strong> and the <strong>label</strong>.
+  </Prop>
+
+  <Prop icon="html5.png" name="toggleSwitchContainerProps" type="object">
+    Forwarded to the toggle switch container (<code>{` <label /> `}</code> element).<br />
+    The toggle switch container contains:<br />
+    <ul>
+      <li>the <strong>hidden input</strong> (<code>{` <input /> `}</code>)</li>
+      <li>and the <strong>moving slider</strong> (<code>{` <div /> `}</code> element)</li>
+    </ul>
+  </Prop>
+
+  <Prop icon="html5.png" name="toggleSwitchSliderProps" type="object">
+    Forwarded to the toggle switch moving part (<code>{` <div /> `}</code> element)
+  </Prop>
+
   <Prop icon="html5.png" name="{...props}" type="object">
     Forwarded to <code>{' <input /> '}</code> element
   </Prop>
+
 </Props>
 
 #### Example
